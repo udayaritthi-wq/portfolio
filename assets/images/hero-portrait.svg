@@ -1,0 +1,15 @@
+<svg width="600" height="750" viewBox="0 0 600 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="750" fill="#F4EFE6"/>
+  <!-- Decorative background geometric circles -->
+  <circle cx="300" cy="300" r="220" fill="#EAE2D5" fill-opacity="0.6"/>
+  <circle cx="300" cy="300" r="160" stroke="#D9532F" stroke-width="2" stroke-dasharray="8 8"/>
+  
+  <!-- Silhouette Portrait Shape -->
+  <path d="M300 170C344.183 170 380 205.817 380 250C380 294.183 344.183 330 300 330C255.817 330 220 294.183 220 250C220 205.817 255.817 170 300 170Z" fill="#1F4E5B"/>
+  <path d="M160 520C160 410 220 370 300 370C380 370 440 410 440 520V600H160V520Z" fill="#1C1917"/>
+  
+  <!-- Journal Annotation overlay -->
+  <rect x="50" y="580" width="500" height="110" rx="12" fill="#FFFFFF" fill-opacity="0.92" stroke="#D4C9BC"/>
+  <text x="300" y="625" font-family="'Fraunces', serif" font-size="24" font-weight="bold" fill="#1C1917" text-anchor="middle">Live with the Question.</text>
+  <text x="300" y="655" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#D9532F" text-anchor="middle" font-weight="600">BBA STUDENT • EXPLORER • STRATEGIST</text>
+</svg>
