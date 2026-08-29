@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/protosem.css">
+  <link rel="stylesheet" href="css/elevated-graphics.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -30,7 +31,7 @@
        ========================================================================= -->
   <header class="editorial-nav-wrapper">
     <div class="editorial-nav">
-      <a href="#hero" class="nav-brand" id="nav-brand-link">
+      <a href="#hero" class="nav-brand" id="nav-brand-link" data-cursor="question">
         <div class="brand-mark">?</div>
         <div>
           <span class="brand-name dynamic-user-name">Udayaritthi</span>
@@ -53,7 +54,7 @@
 
       <!-- CTA Actions -->
       <div class="nav-actions">
-        <a href="#resume" class="nav-cta" data-open-resume id="nav-resume-btn">Resume</a>
+        <a href="#resume" class="nav-cta" data-open-resume id="nav-resume-btn" data-cursor="arrow">Resume</a>
         <button class="mobile-nav-toggle" id="mobile-nav-toggle-btn" aria-label="Toggle navigation menu">
           ☰
         </button>
@@ -86,13 +87,22 @@
          HERO SECTION
          ========================================================================= -->
     <section class="hero-section" id="hero">
+      <div class="ghost-watermark-text ghost-top-right">QUESTION</div>
+      <div class="editorial-crosshair" style="top: 15%; left: 3%;">+</div>
+      <div class="editorial-crosshair" style="bottom: 12%; right: 4%;">⌖</div>
+
       <div class="container">
         <div class="hero-grid">
           <!-- Hero Left Column: Editorial Statement -->
-          <div class="hero-content">
+          <div class="hero-content" style="position: relative; z-index: 2;">
             <div class="hero-editorial-badge">
               <span class="journal-stamp">FIELD JOURNAL NO. 01</span>
-              <span class="hand-note">“Live with the question” <span class="hand-note-arrow">↗</span></span>
+              <span class="living-status-badge">
+                <span class="living-pulse-dot"></span> [ LIVING DOCUMENT ]
+              </span>
+              <span class="hand-note margin-annotation margin-note-saffron" data-thought="Asking the right questions leads to meaningful discovery." style="position: static; margin-left: 0.5rem;">
+                “Why?” <span class="hand-note-arrow">↗</span>
+              </span>
             </div>
 
             <h1 class="hero-title dynamic-user-name">Udayaritthi</h1>
@@ -105,30 +115,32 @@
             </div>
 
             <!-- Dynamic Question-to-Path Interactive Canvas Widget -->
-            <div style="background: var(--bg-card); border: 1px solid var(--pencil-line); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 2.25rem; box-shadow: var(--shadow-sm);">
+            <div style="background: var(--bg-card); border: 1px solid var(--pencil-line); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 2.25rem; box-shadow: var(--shadow-sm); position: relative;" data-cursor="explore">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-saffron); text-transform: uppercase; letter-spacing: 0.1em;">THE CURIOSITY SYSTEM</span>
-                <span class="hand-note" style="font-size: 1rem; color: var(--ink-muted);">Interactive path ↓</span>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-saffron); text-transform: uppercase; letter-spacing: 0.1em;">
+                  THE THINKING TRAIL
+                </span>
+                <span class="coord-stamp">LAT 11.0168° N • LONG 76.9558° E</span>
               </div>
               <div style="width: 100%; height: 60px; position: relative;">
                 <canvas id="question-path-canvas"></canvas>
               </div>
               <div style="display: flex; justify-content: space-between; font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; color: var(--ink-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.35rem;">
                 <span>? Question</span>
-                <span>→ Explore</span>
-                <span>→ Research</span>
-                <span>→ Create</span>
-                <span>→ Learn</span>
+                <span>→ Curiosity</span>
+                <span>→ Exploration</span>
+                <span>→ Discovery</span>
+                <span>→ Solution</span>
               </div>
             </div>
 
             <!-- Action Buttons -->
             <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-              <a href="#journey" class="btn btn-primary" id="hero-explore-btn">
+              <a href="#journey" class="btn btn-primary" id="hero-explore-btn" data-cursor="arrow">
                 <span>Explore My Journey</span>
                 <span class="btn-icon">↓</span>
               </a>
-              <a href="#resume" class="btn btn-secondary" data-open-resume id="hero-resume-btn">
+              <a href="#resume" class="btn btn-secondary" data-open-resume id="hero-resume-btn" data-cursor="arrow">
                 <span>View My Resume</span>
                 <span class="btn-icon">📄</span>
               </a>
@@ -137,13 +149,16 @@
 
           <!-- Hero Right Column: Polaroid Portrait -->
           <div class="hero-portrait-col">
-            <div class="hero-portrait-card" data-lightbox data-slot-id="hero_portrait">
+            <div class="hero-portrait-card" data-lightbox data-slot-id="hero_portrait" data-cursor="explore">
               <div class="washi-tape"></div>
+              <span class="margin-annotation margin-note-turmeric" data-thought="Observing the ecosystem" style="top: -15px; right: -10px; transform: rotate(8deg);">
+                “Look closer.”
+              </span>
               <div class="hero-portrait-img-box">
                 <img src="assets/images/hero-portrait.svg" alt="Udayaritthi - BBA Student & Explorer" id="hero-portrait-img">
               </div>
               <div class="hero-portrait-caption">
-                “Questioning the ordinary, uncovering the insights.”
+                DAY 01 / PROTOSEM — “Questioning the ordinary, uncovering the insights.”
               </div>
               <div style="margin-top: 10px; text-align: center;">
                 <button class="photo-upload-trigger-btn" data-photo-target="hero_portrait">
@@ -156,11 +171,25 @@
       </div>
     </section>
 
+    <!-- CINEMATIC TRANSITION 01 -->
+    <div class="section-transition-bar">
+      <div class="transition-quote-wrap">
+        <div class="transition-line"></div>
+        <div>
+          <span class="transition-step-num">PROLOGUE</span>
+          <div class="transition-quote">“Start with a question.”</div>
+        </div>
+        <div class="transition-line"></div>
+      </div>
+    </div>
+
     <!-- =========================================================================
          SECTION 01: ABOUT ME & "LIVE WITH THE QUESTION"
          ========================================================================= -->
     <section class="portfolio-section" id="about" style="background: var(--bg-card-subtle);">
-      <div class="container">
+      <div class="ghost-watermark-text ghost-bottom-left">EXPLORE</div>
+
+      <div class="container" style="position: relative; z-index: 2;">
         <div class="section-header-block">
           <span class="section-number">01 / ABOUT</span>
           <h2 class="section-heading">A Little About Me</h2>
@@ -204,20 +233,24 @@
               CORE INTERESTS & DOMAINS:
             </h4>
             <div class="about-interests-pills">
-              <span class="interest-pill">Business Strategy</span>
-              <span class="interest-pill">Law & Governance</span>
-              <span class="interest-pill">Research & Analysis</span>
-              <span class="interest-pill">Leadership</span>
-              <span class="interest-pill">Innovation</span>
-              <span class="interest-pill">Indian Industries & Heritage</span>
-              <span class="interest-pill">Social Issues</span>
-              <span class="interest-pill">Problem Solving</span>
-              <span class="interest-pill">Consumer Behaviour & Retail</span>
+              <span class="interest-pill" data-cursor="explore">Business Strategy</span>
+              <span class="interest-pill" data-cursor="explore">Law & Governance</span>
+              <span class="interest-pill" data-cursor="explore">Research & Analysis</span>
+              <span class="interest-pill" data-cursor="explore">Leadership</span>
+              <span class="interest-pill" data-cursor="explore">Innovation</span>
+              <span class="interest-pill" data-cursor="explore">Indian Industries & Heritage</span>
+              <span class="interest-pill" data-cursor="explore">Social Issues</span>
+              <span class="interest-pill" data-cursor="explore">Problem Solving</span>
+              <span class="interest-pill" data-cursor="explore">Consumer Behaviour & Retail</span>
             </div>
           </div>
 
           <!-- Marginalia & Journal Aside -->
-          <div>
+          <div style="position: relative;">
+            <span class="margin-annotation margin-note-indigo" data-thought="Concepts become powerful when grounded in reality." style="top: -12px; right: 10px; transform: rotate(-3deg);">
+              “What if?”
+            </span>
+
             <div class="marginalia" style="margin-bottom: 1.5rem; background: #FFFDF5;">
               <span class="hand-note saffron">Margin Note:</span>
               <p style="font-family: var(--font-hand); font-size: 1.25rem; color: var(--ink-secondary); margin: 0.5rem 0 0 0; line-height: 1.35;">
@@ -226,8 +259,11 @@
             </div>
 
             <div style="background: var(--bg-card); border: 1px solid var(--pencil-line); border-radius: var(--radius-lg); padding: 1.75rem; box-shadow: var(--shadow-sm);">
-              <span class="journal-stamp indigo">IDENTITY PROFILE</span>
-              <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin: 0.85rem 0 0.5rem 0;">16 Personalities: Protagonist (ENFJ)</h3>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <span class="journal-stamp indigo">IDENTITY PROFILE</span>
+                <span class="living-status-badge">[ ENFJ ]</span>
+              </div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin: 0.5rem 0;">16 Personalities: Protagonist</h3>
               <p style="font-size: 0.92rem; color: var(--ink-muted); line-height: 1.55;">
                 Discovered through self-reflection during Protosem Week 0. Natural inclination towards empathetic leadership, connecting ideas, inspiring teamwork, and driving social initiatives with moral grounding.
               </p>
@@ -257,7 +293,7 @@
           <!-- 5-Stage Transformation Visual Grid -->
           <div class="philosophy-arc-container" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12);">
             <div class="philosophy-arc-steps">
-              <div class="arc-step">
+              <div class="arc-step" data-cursor="explore">
                 <div class="arc-icon-box" style="background: rgba(217, 83, 47, 0.25); color: #FF8A65; border-color: #D9532F;">01</div>
                 <div>
                   <div class="arc-text-title" style="color: #FFFFFF;">Question</div>
@@ -267,7 +303,7 @@
 
               <div class="arc-connector"></div>
 
-              <div class="arc-step">
+              <div class="arc-step" data-cursor="explore">
                 <div class="arc-icon-box" style="background: rgba(31, 78, 91, 0.4); color: #7DD3FC; border-color: #1F4E5B;">02</div>
                 <div>
                   <div class="arc-text-title" style="color: #FFFFFF;">Explore</div>
@@ -277,7 +313,7 @@
 
               <div class="arc-connector"></div>
 
-              <div class="arc-step">
+              <div class="arc-step" data-cursor="explore">
                 <div class="arc-icon-box" style="background: rgba(217, 155, 38, 0.3); color: #FDE047; border-color: #D99B26;">03</div>
                 <div>
                   <div class="arc-text-title" style="color: #FFFFFF;">Research</div>
@@ -287,7 +323,7 @@
 
               <div class="arc-connector"></div>
 
-              <div class="arc-step">
+              <div class="arc-step" data-cursor="explore">
                 <div class="arc-icon-box" style="background: rgba(42, 92, 74, 0.4); color: #86EFAC; border-color: #2A5C4A;">04</div>
                 <div>
                   <div class="arc-text-title" style="color: #FFFFFF;">Create</div>
@@ -297,7 +333,7 @@
 
               <div class="arc-connector"></div>
 
-              <div class="arc-step">
+              <div class="arc-step" data-cursor="explore">
                 <div class="arc-icon-box" style="background: rgba(126, 34, 206, 0.35); color: #D8B4FE; border-color: #7E22CE;">05</div>
                 <div>
                   <div class="arc-text-title" style="color: #FFFFFF;">Learn</div>
@@ -310,11 +346,25 @@
       </div>
     </section>
 
+    <!-- CINEMATIC TRANSITION 02 -->
+    <div class="section-transition-bar">
+      <div class="transition-quote-wrap">
+        <div class="transition-line"></div>
+        <div>
+          <span class="transition-step-num">PROGRESSION</span>
+          <div class="transition-quote">“Then follow it.”</div>
+        </div>
+        <div class="transition-line"></div>
+      </div>
+    </div>
+
     <!-- =========================================================================
          SECTION 02: MY JOURNEY (INTERACTIVE TIMELINE)
          ========================================================================= -->
     <section class="portfolio-section" id="journey">
-      <div class="container">
+      <div class="ghost-watermark-text ghost-top-right">JOURNEY</div>
+
+      <div class="container" style="position: relative; z-index: 2;">
         <div class="section-header-block">
           <span class="section-number">02 / JOURNEY</span>
           <h2 class="section-heading">My Developmental Journey</h2>
@@ -327,6 +377,9 @@
           <!-- School Milestone -->
           <div class="timeline-milestone-card">
             <div class="timeline-node-marker"></div>
+            <span class="margin-annotation margin-note-forest" data-thought="Stepping up when responsibility called." style="top: 15px; right: 20px; transform: rotate(2deg);">
+              “First leadership spark.”
+            </span>
             <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
               <span class="journal-stamp">FOUNDATION YEARS</span>
               <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-muted);">SCHOOL LEADERSHIP</span>
@@ -388,13 +441,13 @@
 
             <!-- Previews linking to detailed sections -->
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
-              <a href="#experience" style="text-decoration: none; background: var(--bg-secondary); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--pencil-line-dark); display: block; transition: all var(--transition-fast);">
+              <a href="#experience" style="text-decoration: none; background: var(--bg-secondary); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--pencil-line-dark); display: block; transition: all var(--transition-fast);" data-cursor="arrow">
                 <div style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-saffron);">INTERNSHIP MILESTONE →</div>
                 <div style="font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--ink-primary); margin: 0.25rem 0;">Arvind Chettinad Snacks</div>
                 <div style="font-size: 0.85rem; color: var(--ink-muted);">Production, FIFO inventory, packaging & distribution operations.</div>
               </a>
 
-              <a href="#ethics" style="text-decoration: none; background: var(--bg-secondary); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--pencil-line-dark); display: block; transition: all var(--transition-fast);">
+              <a href="#ethics" style="text-decoration: none; background: var(--bg-secondary); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--pencil-line-dark); display: block; transition: all var(--transition-fast);" data-cursor="arrow">
                 <div style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-indigo);">LEADERSHIP ROLE →</div>
                 <div style="font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--ink-primary); margin: 0.25rem 0;">Joint Secretary — Ethics & Values</div>
                 <div style="font-size: 0.85rem; color: var(--ink-muted);">Planning, coordination, escape rooms & CARE 360 community outreach.</div>
@@ -405,11 +458,25 @@
       </div>
     </section>
 
+    <!-- CINEMATIC TRANSITION 03 -->
+    <div class="section-transition-bar">
+      <div class="transition-quote-wrap">
+        <div class="transition-line"></div>
+        <div>
+          <span class="transition-step-num">GROUNDING</span>
+          <div class="transition-quote">“Learn by doing.”</div>
+        </div>
+        <div class="transition-line"></div>
+      </div>
+    </div>
+
     <!-- =========================================================================
          SECTION 03: EXPERIENCE — ARVIND CHETTINAD SNACKS
          ========================================================================= -->
     <section class="portfolio-section" id="experience" style="background: var(--bg-card-subtle);">
-      <div class="container">
+      <div class="ghost-watermark-text ghost-bottom-left">OPERATIONS</div>
+
+      <div class="container" style="position: relative; z-index: 2;">
         <div class="section-header-block">
           <span class="section-number">03 / EXPERIENCE</span>
           <h2 class="section-heading">Arvind Chettinad Snacks</h2>
@@ -418,7 +485,7 @@
 
         <!-- 3 Core Domains of Exposure -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
-          <div class="inquiry-card">
+          <div class="inquiry-card" data-cursor="explore">
             <div>
               <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
                 <span class="journal-stamp">PRODUCTION</span>
@@ -433,7 +500,7 @@
             </div>
           </div>
 
-          <div class="inquiry-card">
+          <div class="inquiry-card" data-cursor="explore">
             <div>
               <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
                 <span class="journal-stamp indigo">MATERIALS</span>
@@ -448,7 +515,7 @@
             </div>
           </div>
 
-          <div class="inquiry-card">
+          <div class="inquiry-card" data-cursor="explore">
             <div>
               <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
                 <span class="journal-stamp forest">OPERATIONS</span>
@@ -464,8 +531,48 @@
           </div>
         </div>
 
+        <!-- "BEHIND THE EXPERIENCE" EXPANDABLE REVEALS -->
+        <div class="experience-reveal-wrapper">
+          <div class="reveal-nav-tabs">
+            <button class="reveal-tab-btn active" data-target-pane="pane-acs-saw">
+              👁️ What I Saw (Observations)
+            </button>
+            <button class="reveal-tab-btn" data-target-pane="pane-acs-learned">
+              💡 Operational Realities (Key Learnings)
+            </button>
+          </div>
+          <div class="reveal-pane active" id="pane-acs-saw">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+              <div>
+                <strong style="color: var(--accent-saffron);">1. High-heat Batch Frying:</strong>
+                <p style="font-size: 0.9rem; color: var(--ink-secondary); margin-top: 4px;">Observed precise oil temperature regulation to maintain uniform crunch and low oil absorption across 50kg batches.</p>
+              </div>
+              <div>
+                <strong style="color: var(--accent-indigo);">2. FIFO Raw Stores:</strong>
+                <p style="font-size: 0.9rem; color: var(--ink-secondary); margin-top: 4px;">Walked through physical inventory pallets labeled with arrival dates to eliminate stale flour lot usage.</p>
+              </div>
+              <div>
+                <strong style="color: var(--accent-forest);">3. Automated Nitrogen Flushing:</strong>
+                <p style="font-size: 0.9rem; color: var(--ink-secondary); margin-top: 4px;">Pouch sealing speeds reaching 60 packs/minute with integrated thermal batch coding.</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-pane" id="pane-acs-learned">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+              <div>
+                <strong style="color: var(--accent-turmeric);">Inventory Turnover Speed:</strong>
+                <p style="font-size: 0.9rem; color: var(--ink-secondary); margin-top: 4px;">Perishables require tighter supply buffers than durables; even 48-hour delays increase spoilage risk.</p>
+              </div>
+              <div>
+                <strong style="color: var(--accent-crimson);">Safety & Quality Interlock:</strong>
+                <p style="font-size: 0.9rem; color: var(--ink-secondary); margin-top: 4px;">Food safety isn't just an audit compliance checklist; it's the foundation of brand trust in traditional snacking.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Interactive Supply Chain Flow Visual -->
-        <div class="value-chain-interactive">
+        <div class="value-chain-interactive" style="margin-top: 2.5rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem;">
             <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-saffron); margin: 0;">
               Interactive Operational Flow (Click to explore)
@@ -474,27 +581,27 @@
           </div>
 
           <div class="value-chain-flow" id="snacks-chain-flow">
-            <div class="chain-node active" data-stage="raw">
+            <div class="chain-node active" data-stage="raw" data-cursor="explore">
               <span class="chain-node-num">01</span>
               <span class="chain-node-title">Raw Materials</span>
             </div>
-            <div class="chain-node" data-stage="production">
+            <div class="chain-node" data-stage="production" data-cursor="explore">
               <span class="chain-node-num">02</span>
               <span class="chain-node-title">Production</span>
             </div>
-            <div class="chain-node" data-stage="quality">
+            <div class="chain-node" data-stage="quality" data-cursor="explore">
               <span class="chain-node-num">03</span>
               <span class="chain-node-title">Quality</span>
             </div>
-            <div class="chain-node" data-stage="packaging">
+            <div class="chain-node" data-stage="packaging" data-cursor="explore">
               <span class="chain-node-num">04</span>
               <span class="chain-node-title">Packaging</span>
             </div>
-            <div class="chain-node" data-stage="transportation">
+            <div class="chain-node" data-stage="transportation" data-cursor="explore">
               <span class="chain-node-num">05</span>
               <span class="chain-node-title">Transportation</span>
             </div>
-            <div class="chain-node" data-stage="retail">
+            <div class="chain-node" data-stage="retail" data-cursor="explore">
               <span class="chain-node-num">06</span>
               <span class="chain-node-title">Retail</span>
             </div>
@@ -525,31 +632,31 @@
           </div>
 
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="internship_photo_1">
+            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="internship_photo_1" data-cursor="explore">
               <div class="featured-photo-img-box" style="height: 220px;">
                 <img src="assets/images/snacks-internship.svg" alt="Arvind Chettinad Snacks - Batch Processing Facility">
               </div>
-              <div class="featured-photo-caption">Production line & batch frying units</div>
+              <div class="featured-photo-caption">ACS / FACILITY — “Production line & batch frying units”</div>
               <div style="text-align: center; margin-top: 6px;">
                 <button class="photo-upload-trigger-btn" data-photo-target="internship_photo_1">📷 Replace Photo 1</button>
               </div>
             </div>
 
-            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="internship_photo_2">
+            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="internship_photo_2" data-cursor="explore">
               <div class="featured-photo-img-box" style="height: 220px;">
                 <img src="assets/images/snacks-internship.svg" alt="Materials Handling and FIFO Inventory Store">
               </div>
-              <div class="featured-photo-caption">FIFO inventory & materials storage</div>
+              <div class="featured-photo-caption">ACS / INVENTORY — “FIFO inventory & materials storage”</div>
               <div style="text-align: center; margin-top: 6px;">
                 <button class="photo-upload-trigger-btn" data-photo-target="internship_photo_2">📷 Replace Photo 2</button>
               </div>
             </div>
 
-            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="internship_photo_3">
+            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="internship_photo_3" data-cursor="explore">
               <div class="featured-photo-img-box" style="height: 220px;">
                 <img src="assets/images/snacks-internship.svg" alt="Quality Inspection and Packaging Line">
               </div>
-              <div class="featured-photo-caption">Quality checks & packaging distribution</div>
+              <div class="featured-photo-caption">ACS / PACKAGING — “Quality checks & packaging distribution”</div>
               <div style="text-align: center; margin-top: 6px;">
                 <button class="photo-upload-trigger-btn" data-photo-target="internship_photo_3">📷 Replace Photo 3</button>
               </div>
@@ -559,11 +666,25 @@
       </div>
     </section>
 
+    <!-- CINEMATIC TRANSITION 04 -->
+    <div class="section-transition-bar">
+      <div class="transition-quote-wrap">
+        <div class="transition-line"></div>
+        <div>
+          <span class="transition-step-num">ACTION</span>
+          <div class="transition-quote">“Look beneath the surface.”</div>
+        </div>
+        <div class="transition-line"></div>
+      </div>
+    </div>
+
     <!-- =========================================================================
          SECTION 04: ETHICS & VALUES VERTICAL (JOINT SECRETARY)
          ========================================================================= -->
     <section class="portfolio-section" id="ethics">
-      <div class="container">
+      <div class="ghost-watermark-text ghost-top-right">LEADERSHIP</div>
+
+      <div class="container" style="position: relative; z-index: 2;">
         <div class="section-header-block">
           <span class="section-number">04 / LEADERSHIP</span>
           <h2 class="section-heading">Joint Secretary — Ethics & Values Vertical</h2>
@@ -572,11 +693,17 @@
 
         <!-- 4-Stage Leadership Visual Process -->
         <div class="philosophy-arc-container" style="margin-bottom: 3.5rem;">
-          <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--accent-indigo); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem;">
-            LEADERSHIP EXECUTION FRAMEWORK
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--accent-indigo); text-transform: uppercase; letter-spacing: 0.1em;">
+              LEADERSHIP EXECUTION FRAMEWORK
+            </div>
+            <span class="margin-annotation margin-note-indigo" data-thought="Structure creates freedom for creativity." style="position: static;">
+              “There’s more to this.”
+            </span>
           </div>
+
           <div class="philosophy-arc-steps">
-            <div class="arc-step">
+            <div class="arc-step" data-cursor="explore">
               <div class="arc-icon-box">01</div>
               <div>
                 <div class="arc-text-title">Planning</div>
@@ -586,7 +713,7 @@
 
             <div class="arc-connector"></div>
 
-            <div class="arc-step">
+            <div class="arc-step" data-cursor="explore">
               <div class="arc-icon-box">02</div>
               <div>
                 <div class="arc-text-title">Coordination</div>
@@ -596,7 +723,7 @@
 
             <div class="arc-connector"></div>
 
-            <div class="arc-step">
+            <div class="arc-step" data-cursor="explore">
               <div class="arc-icon-box">03</div>
               <div>
                 <div class="arc-text-title">Execution</div>
@@ -606,7 +733,7 @@
 
             <div class="arc-connector"></div>
 
-            <div class="arc-step">
+            <div class="arc-step" data-cursor="explore">
               <div class="arc-icon-box">04</div>
               <div>
                 <div class="arc-text-title">Reflection</div>
@@ -619,7 +746,7 @@
         <!-- Rich Visual Event Showcase Cards -->
         <div class="ethics-events-grid">
           <!-- Crack the Case -->
-          <div class="ethics-event-card">
+          <div class="ethics-event-card" data-cursor="explore">
             <div class="ethics-card-media" data-lightbox data-slot-id="event_photo_1">
               <img src="assets/images/ethics-crack-the-case.svg" alt="Crack the Case Event">
             </div>
@@ -636,7 +763,7 @@
           </div>
 
           <!-- Virtue Verdicts -->
-          <div class="ethics-event-card">
+          <div class="ethics-event-card" data-cursor="explore">
             <div class="ethics-card-media" data-lightbox data-slot-id="event_photo_2">
               <img src="assets/images/ethics-virtue-verdicts.svg" alt="Virtue Verdicts Event">
             </div>
@@ -653,7 +780,7 @@
           </div>
 
           <!-- Ethics Escape Room -->
-          <div class="ethics-event-card">
+          <div class="ethics-event-card" data-cursor="explore">
             <div class="ethics-card-media" data-lightbox data-slot-id="event_photo_3">
               <img src="assets/images/ethics-escape-room.svg" alt="Ethics Escape Room">
             </div>
@@ -670,7 +797,7 @@
           </div>
 
           <!-- Gratitude Day -->
-          <div class="ethics-event-card">
+          <div class="ethics-event-card" data-cursor="explore">
             <div class="ethics-card-media" data-lightbox data-slot-id="event_photo_4">
               <img src="assets/images/ethics-gratitude.svg" alt="Gratitude Day Display">
             </div>
@@ -687,7 +814,7 @@
           </div>
 
           <!-- Pongal Initiative -->
-          <div class="ethics-event-card">
+          <div class="ethics-event-card" data-cursor="explore">
             <div class="ethics-card-media" data-lightbox data-slot-id="event_photo_5">
               <img src="assets/images/ethics-pongal.svg" alt="Pongal Initiative Celebration">
             </div>
@@ -704,7 +831,7 @@
           </div>
 
           <!-- CARE 360 -->
-          <div class="ethics-event-card" style="border-color: var(--accent-saffron);">
+          <div class="ethics-event-card" style="border-color: var(--accent-saffron);" data-cursor="explore">
             <div class="ethics-card-media" data-lightbox data-slot-id="event_photo_care360">
               <img src="assets/images/ethics-care360.svg" alt="CARE 360 Community Initiative">
             </div>
@@ -730,11 +857,25 @@
       </div>
     </section>
 
+    <!-- CINEMATIC TRANSITION 05 -->
+    <div class="section-transition-bar">
+      <div class="transition-quote-wrap">
+        <div class="transition-line"></div>
+        <div>
+          <span class="transition-step-num">EXPLORATION</span>
+          <div class="transition-quote">“Keep exploring.”</div>
+        </div>
+        <div class="transition-line"></div>
+      </div>
+    </div>
+
     <!-- =========================================================================
          SECTION 05: PROJECTS — INDIAN TRADITIONAL WEAR & TEXTILE INDUSTRY
          ========================================================================= -->
     <section class="portfolio-section" id="projects" style="background: var(--bg-card-subtle);">
-      <div class="container">
+      <div class="ghost-watermark-text ghost-bottom-left">RESEARCH</div>
+
+      <div class="container" style="position: relative; z-index: 2;">
         <div class="section-header-block">
           <span class="section-number">05 / PROJECTS</span>
           <h2 class="section-heading">Indian Traditional Wear & Textile Industry</h2>
@@ -744,12 +885,19 @@
         <div class="textile-project-sheet">
           <div class="textile-pattern-strip"></div>
 
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; margin-top: 0.75rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; margin-top: 0.75rem;">
             <div>
               <span class="journal-stamp indigo">ACADEMIC RESEARCH PROJECT</span>
               <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin: 0.5rem 0 0.25rem 0;">Textile Value Chain & Ethnic Wear Ecosystem</h3>
             </div>
-            <span class="hand-note turmeric" style="font-size: 1.3rem;">From farm to festive wardrobe ✦</span>
+            <span class="hand-note turmeric margin-annotation margin-note-turmeric" data-thought="Connecting craft traditions to modern retail scaling." style="position: static; font-size: 1.3rem;">
+              From farm to festive wardrobe ✦
+            </span>
+          </div>
+
+          <!-- THE CONTINUOUS FLOWING THREAD MOTIF CANVAS -->
+          <div class="textile-thread-canvas-container">
+            <canvas id="textile-thread-canvas"></canvas>
           </div>
 
           <!-- Research Transformation Arc -->
@@ -779,35 +927,35 @@
             </div>
 
             <div class="value-chain-flow" id="textile-chain-flow" style="grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));">
-              <div class="chain-node active" data-stage="cotton">
+              <div class="chain-node active" data-stage="cotton" data-cursor="explore">
                 <span class="chain-node-num">01</span>
                 <span class="chain-node-title">Cotton</span>
               </div>
-              <div class="chain-node" data-stage="processing">
+              <div class="chain-node" data-stage="processing" data-cursor="explore">
                 <span class="chain-node-num">02</span>
                 <span class="chain-node-title">Processing</span>
               </div>
-              <div class="chain-node" data-stage="spinning">
+              <div class="chain-node" data-stage="spinning" data-cursor="explore">
                 <span class="chain-node-num">03</span>
                 <span class="chain-node-title">Spinning</span>
               </div>
-              <div class="chain-node" data-stage="weaving">
+              <div class="chain-node" data-stage="weaving" data-cursor="explore">
                 <span class="chain-node-num">04</span>
                 <span class="chain-node-title">Weaving</span>
               </div>
-              <div class="chain-node" data-stage="manufacturing">
+              <div class="chain-node" data-stage="manufacturing" data-cursor="explore">
                 <span class="chain-node-num">05</span>
                 <span class="chain-node-title">Garmenting</span>
               </div>
-              <div class="chain-node" data-stage="brands">
+              <div class="chain-node" data-stage="brands" data-cursor="explore">
                 <span class="chain-node-num">06</span>
                 <span class="chain-node-title">Brands</span>
               </div>
-              <div class="chain-node" data-stage="retail">
+              <div class="chain-node" data-stage="retail" data-cursor="explore">
                 <span class="chain-node-num">07</span>
                 <span class="chain-node-title">Retail</span>
               </div>
-              <div class="chain-node" data-stage="consumer">
+              <div class="chain-node" data-stage="consumer" data-cursor="explore">
                 <span class="chain-node-num">08</span>
                 <span class="chain-node-title">Consumer</span>
               </div>
@@ -828,47 +976,77 @@
             </div>
           </div>
 
-          <!-- Research Insights Grid -->
+          <!-- Abstract Data / Visual Cards -->
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem;">
-            <div style="background: var(--bg-primary); border: 1px solid var(--pencil-line); border-radius: var(--radius-md); padding: 1.5rem;">
-              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 0.5rem;">Intermediaries & Margins</h4>
-              <p style="font-size: 0.9rem; color: var(--ink-secondary); line-height: 1.55;">
-                Detailed analysis of yarn brokers, fabric aggregators, and commission agents who absorb working capital risks across the fragmented textile landscape.
+            <div class="abstract-data-card" data-cursor="explore">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--ink-primary); margin: 0;">Intermediary Distribution</h4>
+                <span class="coord-stamp">[ STAKEHOLDER MATRIX ]</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--ink-secondary); line-height: 1.55; margin-top: 0.5rem;">
+                Brokers and fabric aggregators absorb inventory working capital risks across fragmented decentralized handloom weaver clusters.
               </p>
+              <div class="abstract-bar-group">
+                <div class="abstract-bar active" style="height: 35%;"></div>
+                <div class="abstract-bar" style="height: 70%;"></div>
+                <div class="abstract-bar" style="height: 50%;"></div>
+                <div class="abstract-bar" style="height: 90%;"></div>
+                <div class="abstract-bar" style="height: 60%;"></div>
+              </div>
             </div>
 
-            <div style="background: var(--bg-primary); border: 1px solid var(--pencil-line); border-radius: var(--radius-md); padding: 1.5rem;">
-              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 0.5rem;">Brand Players & Turnover</h4>
-              <p style="font-size: 0.9rem; color: var(--ink-secondary); line-height: 1.55;">
-                Researching market turnover, category expansion, bridal ethnic trends, and revenue strategies of organized market leaders versus regional heritage players.
+            <div class="abstract-data-card" data-cursor="explore">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--ink-primary); margin: 0;">Brand Players & Turnover</h4>
+                <span class="coord-stamp">[ TURNOVER RESEARCH ]</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--ink-secondary); line-height: 1.55; margin-top: 0.5rem;">
+                Analyzing bridal and festival ethnic segment expansion, organized omnichannel networks, and heritage brand loyalty versus agile regional retailers.
               </p>
+              <div class="abstract-bar-group">
+                <div class="abstract-bar" style="height: 50%;"></div>
+                <div class="abstract-bar active" style="height: 85%;"></div>
+                <div class="abstract-bar" style="height: 65%;"></div>
+                <div class="abstract-bar" style="height: 40%;"></div>
+                <div class="abstract-bar" style="height: 95%;"></div>
+              </div>
             </div>
 
-            <div style="background: var(--bg-primary); border: 1px solid var(--pencil-line); border-radius: var(--radius-md); padding: 1.5rem;">
-              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 0.5rem;">Craftsmanship vs. Modern Scale</h4>
-              <p style="font-size: 0.9rem; color: var(--ink-secondary); line-height: 1.55;">
+            <div class="abstract-data-card" data-cursor="explore">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--ink-primary); margin: 0;">Craftsmanship vs. Modern Scale</h4>
+                <span class="coord-stamp">[ SCALE SPECTRUM ]</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--ink-secondary); line-height: 1.55; margin-top: 0.5rem;">
                 Balancing artisanal handloom heritage, intricate zari embroidery, and GI tags with modern high-speed powerloom efficiency and e-commerce distribution.
               </p>
+              <div class="abstract-bar-group">
+                <div class="abstract-bar" style="height: 80%;"></div>
+                <div class="abstract-bar" style="height: 40%;"></div>
+                <div class="abstract-bar active" style="height: 75%;"></div>
+                <div class="abstract-bar" style="height: 60%;"></div>
+                <div class="abstract-bar" style="height: 90%;"></div>
+              </div>
             </div>
           </div>
 
           <!-- Project Photos -->
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem;">
-            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="project_photo_1">
+            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="project_photo_1" data-cursor="explore">
               <div class="featured-photo-img-box" style="height: 220px;">
                 <img src="assets/images/textile-research.svg" alt="Textile Value Chain Research Deck">
               </div>
-              <div class="featured-photo-caption">Sector presentation poster & value chain findings</div>
+              <div class="featured-photo-caption">RESEARCH DECK / VALUE CHAIN — “Poster synthesis & market metrics”</div>
               <div style="text-align: center; margin-top: 6px;">
                 <button class="photo-upload-trigger-btn" data-photo-target="project_photo_1">📷 Replace Project Photo 1</button>
               </div>
             </div>
 
-            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="project_photo_2">
+            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="project_photo_2" data-cursor="explore">
               <div class="featured-photo-img-box" style="height: 220px;">
                 <img src="assets/images/textile-research.svg" alt="Ethnic Wear Market Dynamics">
               </div>
-              <div class="featured-photo-caption">Market breakdown & turnover analysis</div>
+              <div class="featured-photo-caption">ETHNIC WEAR / ECOSYSTEM — “Market breakdown & turnover analysis”</div>
               <div style="text-align: center; margin-top: 6px;">
                 <button class="photo-upload-trigger-btn" data-photo-target="project_photo_2">📷 Replace Project Photo 2</button>
               </div>
@@ -882,9 +1060,10 @@
          SECTION 06: PROTOSEM FIELD JOURNAL (DAY-BY-DAY)
          ========================================================================= -->
     <section class="protosem-section-wrapper" id="protosem">
+      <div class="ghost-watermark-text ghost-top-right">JOURNAL</div>
       <div class="journal-texture-bg"></div>
 
-      <div class="container">
+      <div class="container" style="position: relative; z-index: 2;">
         <div class="section-header-block">
           <span class="section-number">06 / FIELD JOURNAL</span>
           <h2 class="section-heading">Protosem: Learning Beyond the Classroom</h2>
@@ -894,24 +1073,24 @@
         <!-- Journal Controls Bar: Week Switcher + Day Pills -->
         <div class="journal-controls-bar">
           <div class="week-selector-group">
-            <button class="week-tab-btn active" data-week="all" id="week-tab-all">All Weeks</button>
-            <button class="week-tab-btn" data-week="week0" id="week-tab-0">Week 0 (Getting Started)</button>
-            <button class="week-tab-btn" data-week="week1" id="week-tab-1">Week 1 (Ideas to Industry)</button>
+            <button class="week-tab-btn active" data-week="all" id="week-tab-all" data-cursor="arrow">All Weeks</button>
+            <button class="week-tab-btn" data-week="week0" id="week-tab-0" data-cursor="arrow">Week 0 (Getting Started)</button>
+            <button class="week-tab-btn" data-week="week1" id="week-tab-1" data-cursor="arrow">Week 1 (Ideas to Industry)</button>
           </div>
 
           <div class="day-pills-nav" id="journal-day-pills">
-            <button class="day-pill-btn active" data-day="all">All Days</button>
+            <button class="day-pill-btn active" data-day="all" data-cursor="arrow">All Days</button>
             <!-- Week 0 Pills -->
-            <button class="day-pill-btn" data-day="w0-d1" data-week-parent="week0">W0 / Day 1</button>
-            <button class="day-pill-btn" data-day="w0-d2" data-week-parent="week0">W0 / Day 2</button>
-            <button class="day-pill-btn" data-day="w0-d3" data-week-parent="week0">W0 / Day 3</button>
-            <button class="day-pill-btn" data-day="w0-d4" data-week-parent="week0">W0 / Day 4</button>
+            <button class="day-pill-btn" data-day="w0-d1" data-week-parent="week0" data-cursor="arrow">W0 / Day 1</button>
+            <button class="day-pill-btn" data-day="w0-d2" data-week-parent="week0" data-cursor="arrow">W0 / Day 2</button>
+            <button class="day-pill-btn" data-day="w0-d3" data-week-parent="week0" data-cursor="arrow">W0 / Day 3</button>
+            <button class="day-pill-btn" data-day="w0-d4" data-week-parent="week0" data-cursor="arrow">W0 / Day 4</button>
             <!-- Week 1 Pills -->
-            <button class="day-pill-btn" data-day="w1-d1" data-week-parent="week1">W1 / Day 1</button>
-            <button class="day-pill-btn" data-day="w1-d2" data-week-parent="week1">W1 / Day 2</button>
-            <button class="day-pill-btn" data-day="w1-d3" data-week-parent="week1">W1 / Day 3</button>
-            <button class="day-pill-btn" data-day="w1-d4" data-week-parent="week1">W1 / Day 4</button>
-            <button class="day-pill-btn" data-day="w1-d5" data-week-parent="week1">W1 / Day 5</button>
+            <button class="day-pill-btn" data-day="w1-d1" data-week-parent="week1" data-cursor="arrow">W1 / Day 1</button>
+            <button class="day-pill-btn" data-day="w1-d2" data-week-parent="week1" data-cursor="arrow">W1 / Day 2</button>
+            <button class="day-pill-btn" data-day="w1-d3" data-week-parent="week1" data-cursor="arrow">W1 / Day 3</button>
+            <button class="day-pill-btn" data-day="w1-d4" data-week-parent="week1" data-cursor="arrow">W1 / Day 4</button>
+            <button class="day-pill-btn" data-day="w1-d5" data-week-parent="week1" data-cursor="arrow">W1 / Day 5</button>
           </div>
         </div>
 
@@ -955,12 +1134,12 @@
                 <span class="hand-note saffron">Visual Diary • Day 1</span>
                 <button class="photo-upload-trigger-btn" data-photo-target="protosem_w0_d1_hero">📷 Upload Photos</button>
               </div>
-              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w0_d1_hero">
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w0_d1_hero" data-cursor="explore">
                 <div class="washi-tape"></div>
                 <div class="featured-photo-img-box">
                   <img src="assets/images/protosem-w0-d1.svg" alt="Week 0 Day 1 - Breaking the Ice & Peer Connection">
                 </div>
-                <div class="featured-photo-caption">Breaking the ice: From strangers to collaborators</div>
+                <div class="featured-photo-caption">DAY 01 / PROTOSEM — “Breaking the ice: From strangers to collaborators”</div>
               </div>
             </div>
           </div>
@@ -1008,12 +1187,12 @@
                 <span class="hand-note indigo">Visual Diary • Day 2</span>
                 <button class="photo-upload-trigger-btn" data-photo-target="protosem_w0_d2_hero">📷 Upload Photos</button>
               </div>
-              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w0_d2_hero">
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w0_d2_hero" data-cursor="explore">
                 <div class="washi-tape"></div>
                 <div class="featured-photo-img-box">
                   <img src="assets/images/protosem-w0-d2.svg" alt="Week 0 Day 2 - Understanding Myself & Zen Pencils">
                 </div>
-                <div class="featured-photo-caption">16 Personalities: Protagonist & ZEN Pencils presentation</div>
+                <div class="featured-photo-caption">DAY 02 / PROTOSEM — “16 Personalities: Protagonist & ZEN Pencils presentation”</div>
               </div>
             </div>
           </div>
@@ -1066,12 +1245,12 @@
                 <span class="hand-note turmeric">Visual Diary • Day 3</span>
                 <button class="photo-upload-trigger-btn" data-photo-target="protosem_w0_d3_hero">📷 Upload Photos</button>
               </div>
-              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w0_d3_hero">
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w0_d3_hero" data-cursor="explore">
                 <div class="washi-tape"></div>
                 <div class="featured-photo-img-box">
                   <img src="assets/images/protosem-w0-d3.svg" alt="Week 0 Day 3 - Building the Spaghetti Tower Challenge">
                 </div>
-                <div class="featured-photo-caption">Iterative engineering: Spaghetti tower challenge</div>
+                <div class="featured-photo-caption">DAY 03 / PROTOSEM — “The solution looked simple. The process wasn't.”</div>
               </div>
             </div>
           </div>
@@ -1113,12 +1292,12 @@
                 <span class="hand-note forest">Visual Diary • Day 4</span>
                 <button class="photo-upload-trigger-btn" data-photo-target="protosem_w0_d4_hero">📷 Upload Photos</button>
               </div>
-              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w0_d4_hero">
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w0_d4_hero" data-cursor="explore">
                 <div class="washi-tape"></div>
                 <div class="featured-photo-img-box">
                   <img src="assets/images/protosem-w0-d4.svg" alt="Week 0 Day 4 - Tech Talk on AI Prompting">
                 </div>
-                <div class="featured-photo-caption">Mastering context: Prompt engineering tech talk</div>
+                <div class="featured-photo-caption">DAY 04 / PROTOSEM — “Mastering context: Prompt engineering tech talk”</div>
               </div>
             </div>
           </div>
@@ -1168,12 +1347,12 @@
                 <span class="hand-note saffron">Visual Diary • Day 1</span>
                 <button class="photo-upload-trigger-btn" data-photo-target="protosem_w1_d1_hero">📷 Upload Photos</button>
               </div>
-              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d1_hero">
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d1_hero" data-cursor="explore">
                 <div class="washi-tape"></div>
                 <div class="featured-photo-img-box">
                   <img src="assets/images/protosem-w1-d1.svg" alt="Week 1 Day 1 - Design Thinking and Textile Sector Selection">
                 </div>
-                <div class="featured-photo-caption">Sector selection: Indian Textile & Ethnic Wear poster design</div>
+                <div class="featured-photo-caption">DAY 01 / WEEK 1 — “Sector selection: Indian Ethnic Wear poster design”</div>
               </div>
             </div>
           </div>
@@ -1219,12 +1398,12 @@
                 <span class="hand-note indigo">Visual Diary • Day 2</span>
                 <button class="photo-upload-trigger-btn" data-photo-target="protosem_w1_d2_hero">📷 Upload Photos</button>
               </div>
-              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d2_hero">
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d2_hero" data-cursor="explore">
                 <div class="washi-tape"></div>
                 <div class="featured-photo-img-box">
                   <img src="assets/images/protosem-w1-d2.svg" alt="Week 1 Day 2 - IDEO Shopping Cart Case Study">
                 </div>
-                <div class="featured-photo-caption">IDEO Case Study & Power BI intelligence session</div>
+                <div class="featured-photo-caption">DAY 02 / WEEK 1 — “IDEO Case Study & Power BI intelligence session”</div>
               </div>
             </div>
           </div>
@@ -1272,12 +1451,12 @@
                 <span class="hand-note saffron">Visual Diary • Day 3</span>
                 <button class="photo-upload-trigger-btn" data-photo-target="protosem_w1_d3_hero">📷 Upload Photos</button>
               </div>
-              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d3_hero">
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d3_hero" data-cursor="explore">
                 <div class="washi-tape"></div>
                 <div class="featured-photo-img-box">
                   <img src="assets/images/protosem-w1-d3.svg" alt="Week 1 Day 3 - Textile Research Presentation">
                 </div>
-                <div class="featured-photo-caption">Sector presentation: Decoding the ethnic wear value chain</div>
+                <div class="featured-photo-caption">DAY 03 / WEEK 1 — “Sector presentation: Decoding the ethnic wear value chain”</div>
               </div>
             </div>
           </div>
@@ -1319,12 +1498,12 @@
                 <span class="hand-note turmeric">Visual Diary • Day 4</span>
                 <button class="photo-upload-trigger-btn" data-photo-target="protosem_w1_d4_hero">📷 Upload Photos</button>
               </div>
-              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d4_hero">
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d4_hero" data-cursor="explore">
                 <div class="washi-tape"></div>
                 <div class="featured-photo-img-box">
                   <img src="assets/images/protosem-w1-d4.svg" alt="Week 1 Day 4 - Portfolio and Resume Creation">
                 </div>
-                <div class="featured-photo-caption">Crafting my portfolio & resume using Antigravity AI</div>
+                <div class="featured-photo-caption">DAY 04 / WEEK 1 — “Crafting my portfolio & resume using Antigravity AI”</div>
               </div>
             </div>
           </div>
@@ -1376,12 +1555,12 @@
                 <span class="hand-note forest">Visual Diary • Day 5</span>
                 <button class="photo-upload-trigger-btn" data-photo-target="protosem_w1_d5_hero">📷 Upload Photos</button>
               </div>
-              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d5_hero">
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d5_hero" data-cursor="explore">
                 <div class="washi-tape"></div>
                 <div class="featured-photo-img-box">
                   <img src="assets/images/protosem-w1-d5.svg" alt="Week 1 Day 5 - Goal Setting and Alumni Interactions">
                 </div>
-                <div class="featured-photo-caption">Goal setting with Ram & Subam Palamuthir / Textile alumni interactions</div>
+                <div class="featured-photo-caption">DAY 05 / WEEK 1 — “Goal setting with Ram & Subam Palamuthir / Textile alumni”</div>
               </div>
             </div>
           </div>
@@ -1393,7 +1572,9 @@
          SECTION 07: INTERACTIVE SKILLS CONSTELLATION
          ========================================================================= -->
     <section class="portfolio-section" id="skills">
-      <div class="container">
+      <div class="ghost-watermark-text ghost-bottom-left">SKILLS</div>
+
+      <div class="container" style="position: relative; z-index: 2;">
         <div class="section-header-block">
           <span class="section-number">07 / SKILLS</span>
           <h2 class="section-heading">Skills & Competencies Network</h2>
@@ -1409,7 +1590,7 @@
 
           <!-- Central ME node + surrounding bubbles -->
           <div style="display: flex; justify-content: center; align-items: center;">
-            <div class="skills-center-core" id="skills-center-node">
+            <div class="skills-center-core" id="skills-center-node" data-cursor="question">
               <span>ME</span>
               <span class="skills-center-label">CORE</span>
             </div>
@@ -1417,51 +1598,51 @@
 
           <div class="skills-node-cluster">
             <!-- Core Competencies -->
-            <div class="skill-node-bubble" data-skill-name="RESEARCH">
+            <div class="skill-node-bubble" data-skill-name="RESEARCH" data-cursor="explore">
               <span class="skill-dot" style="background: #D9532F;"></span> Research
             </div>
-            <div class="skill-node-bubble" data-skill-name="LEADERSHIP">
+            <div class="skill-node-bubble" data-skill-name="LEADERSHIP" data-cursor="explore">
               <span class="skill-dot" style="background: #38BDF8;"></span> Leadership
             </div>
-            <div class="skill-node-bubble" data-skill-name="COMMUNICATION">
+            <div class="skill-node-bubble" data-skill-name="COMMUNICATION" data-cursor="explore">
               <span class="skill-dot" style="background: #4ADE80;"></span> Communication
             </div>
-            <div class="skill-node-bubble" data-skill-name="TEAMWORK">
+            <div class="skill-node-bubble" data-skill-name="TEAMWORK" data-cursor="explore">
               <span class="skill-dot" style="background: #F472B6;"></span> Teamwork
             </div>
-            <div class="skill-node-bubble" data-skill-name="PROBLEM SOLVING">
+            <div class="skill-node-bubble" data-skill-name="PROBLEM SOLVING" data-cursor="explore">
               <span class="skill-dot" style="background: #FBBF24;"></span> Problem Solving
             </div>
-            <div class="skill-node-bubble" data-skill-name="CRITICAL THINKING">
+            <div class="skill-node-bubble" data-skill-name="CRITICAL THINKING" data-cursor="explore">
               <span class="skill-dot" style="background: #A78BFA;"></span> Critical Thinking
             </div>
-            <div class="skill-node-bubble" data-skill-name="CREATIVITY">
+            <div class="skill-node-bubble" data-skill-name="CREATIVITY" data-cursor="explore">
               <span class="skill-dot" style="background: #FB923C;"></span> Creativity
             </div>
-            <div class="skill-node-bubble" data-skill-name="EVENT MANAGEMENT">
+            <div class="skill-node-bubble" data-skill-name="EVENT MANAGEMENT" data-cursor="explore">
               <span class="skill-dot" style="background: #34D399;"></span> Event Management
             </div>
-            <div class="skill-node-bubble" data-skill-name="PRESENTATION">
+            <div class="skill-node-bubble" data-skill-name="PRESENTATION" data-cursor="explore">
               <span class="skill-dot" style="background: #F87171;"></span> Presentation
             </div>
-            <div class="skill-node-bubble" data-skill-name="BUSINESS ANALYSIS">
+            <div class="skill-node-bubble" data-skill-name="BUSINESS ANALYSIS" data-cursor="explore">
               <span class="skill-dot" style="background: #818CF8;"></span> Business Analysis
             </div>
 
             <!-- Tools Cluster -->
-            <div class="skill-node-bubble tool-item" data-skill-name="MICROSOFT EXCEL">
+            <div class="skill-node-bubble tool-item" data-skill-name="MICROSOFT EXCEL" data-cursor="explore">
               <span class="skill-dot"></span> Microsoft Excel
             </div>
-            <div class="skill-node-bubble tool-item" data-skill-name="POWER BI">
+            <div class="skill-node-bubble tool-item" data-skill-name="POWER BI" data-cursor="explore">
               <span class="skill-dot"></span> Power BI
             </div>
-            <div class="skill-node-bubble tool-item" data-skill-name="AI TOOLS">
+            <div class="skill-node-bubble tool-item" data-skill-name="AI TOOLS" data-cursor="explore">
               <span class="skill-dot"></span> AI Prompting & Tools
             </div>
-            <div class="skill-node-bubble tool-item" data-skill-name="ANTIGRAVITY">
+            <div class="skill-node-bubble tool-item" data-skill-name="ANTIGRAVITY" data-cursor="explore">
               <span class="skill-dot"></span> Antigravity
             </div>
-            <div class="skill-node-bubble tool-item" data-skill-name="PRESENTATION/DESIGN TOOLS">
+            <div class="skill-node-bubble tool-item" data-skill-name="PRESENTATION/DESIGN TOOLS" data-cursor="explore">
               <span class="skill-dot"></span> Presentation & Design Tools
             </div>
           </div>
@@ -1480,35 +1661,73 @@
     </section>
 
     <!-- =========================================================================
-         SECTION 08: RESEARCH & INTERESTS ("THINGS THAT MAKE ME CURIOUS")
+         SECTION 08: RESEARCH & INTERESTS ("RESEARCH BOARD" VISUAL WALL)
          ========================================================================= -->
     <section class="portfolio-section" id="curiosities" style="background: var(--bg-card-subtle);">
-      <div class="container">
+      <div class="ghost-watermark-text ghost-top-right">INQUIRY</div>
+
+      <div class="container" style="position: relative; z-index: 2;">
         <div class="section-header-block">
           <span class="section-number">08 / INQUIRIES</span>
           <h2 class="section-heading">Things That Make Me Curious</h2>
           <p class="section-subheading">An evolving intellectual space examining the intersection of commerce, law, traditional Indian craftsmanship, and modern consumer behavior.</p>
         </div>
 
-        <!-- Curiosity Domains Badges -->
-        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 3.5rem;">
-          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">🏛️ Business Strategy</span>
-          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">⚖️ Law & Corporate Governance</span>
-          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">🔬 Market Research</span>
-          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">🧵 Indian Industries & Heritage</span>
-          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">🤝 Social Issues & Inclusion</span>
-          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">💡 Innovation & Design</span>
-          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">🛍️ Consumer Behaviour & Retail</span>
+        <!-- THE RESEARCH BOARD WALL -->
+        <div class="research-board-wall">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.75rem;">
+            <span class="journal-stamp">STUDIO RESEARCH WALL</span>
+            <span class="living-status-badge">
+              <span class="living-pulse-dot"></span> [ STILL EXPLORING ]
+            </span>
+          </div>
+
+          <div class="research-pinboard-grid">
+            <div class="research-pinned-card" data-cursor="explore">
+              <div class="push-pin-icon"></div>
+              <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-saffron); font-weight: 700; margin-bottom: 0.4rem;">01. QUESTION</div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--ink-primary); margin: 0 0 0.5rem 0;">Artisanal Survival</h4>
+              <p style="font-size: 0.85rem; color: var(--ink-secondary); line-height: 1.45;">How do ancient handloom clusters sustain economics amidst fast fashion?</p>
+            </div>
+
+            <div class="research-pinned-card" data-cursor="explore">
+              <div class="push-pin-icon indigo"></div>
+              <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-indigo); font-weight: 700; margin-bottom: 0.4rem;">02. OBSERVATION</div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--ink-primary); margin: 0 0 0.5rem 0;">Consumer Mindsets</h4>
+              <p style="font-size: 0.85rem; color: var(--ink-secondary); line-height: 1.45;">Youth value cultural roots during festivals, creating sharp demand spikes.</p>
+            </div>
+
+            <div class="research-pinned-card" data-cursor="explore">
+              <div class="push-pin-icon turmeric"></div>
+              <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-turmeric); font-weight: 700; margin-bottom: 0.4rem;">03. RESEARCH</div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--ink-primary); margin: 0 0 0.5rem 0;">Value Chains</h4>
+              <p style="font-size: 0.85rem; color: var(--ink-secondary); line-height: 1.45;">Intermediaries capture significant margin due to working capital friction.</p>
+            </div>
+
+            <div class="research-pinned-card" data-cursor="explore">
+              <div class="push-pin-icon forest"></div>
+              <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-forest); font-weight: 700; margin-bottom: 0.4rem;">04. IDEA</div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--ink-primary); margin: 0 0 0.5rem 0;">Circular Ecosystems</h4>
+              <p style="font-size: 0.85rem; color: var(--ink-secondary); line-height: 1.45;">Integrating textile waste recycling (e.g. Oye Mill) into premium collections.</p>
+            </div>
+
+            <div class="research-pinned-card" data-cursor="explore">
+              <div class="push-pin-icon"></div>
+              <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-saffron); font-weight: 700; margin-bottom: 0.4rem;">05. INSIGHT</div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--ink-primary); margin: 0 0 0.5rem 0;">Heritage + Scale</h4>
+              <p style="font-size: 0.85rem; color: var(--ink-secondary); line-height: 1.45;">Preserving authenticity requires modern supply agility, not isolation.</p>
+            </div>
+          </div>
         </div>
 
-        <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+        <div style="margin: 3.5rem 0 1.5rem 0; display: flex; justify-content: space-between; align-items: center;">
           <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink-primary); margin: 0;">Questions I'm Exploring</h3>
           <span class="hand-note saffron">Inquiry cards ✦</span>
         </div>
 
         <!-- 5 Interactive Inquiry Cards -->
         <div class="inquiry-grid">
-          <div class="inquiry-card">
+          <div class="inquiry-card" data-cursor="explore">
             <div>
               <div class="inquiry-card-q-icon">?</div>
               <div class="inquiry-card-text">
@@ -1521,7 +1740,7 @@
             </div>
           </div>
 
-          <div class="inquiry-card">
+          <div class="inquiry-card" data-cursor="explore">
             <div>
               <div class="inquiry-card-q-icon" style="color: var(--accent-indigo);">?</div>
               <div class="inquiry-card-text">
@@ -1534,7 +1753,7 @@
             </div>
           </div>
 
-          <div class="inquiry-card">
+          <div class="inquiry-card" data-cursor="explore">
             <div>
               <div class="inquiry-card-q-icon" style="color: var(--accent-turmeric);">?</div>
               <div class="inquiry-card-text">
@@ -1547,7 +1766,7 @@
             </div>
           </div>
 
-          <div class="inquiry-card">
+          <div class="inquiry-card" data-cursor="explore">
             <div>
               <div class="inquiry-card-q-icon" style="color: var(--accent-forest);">?</div>
               <div class="inquiry-card-text">
@@ -1560,7 +1779,7 @@
             </div>
           </div>
 
-          <div class="inquiry-card">
+          <div class="inquiry-card" data-cursor="explore">
             <div>
               <div class="inquiry-card-q-icon" style="color: #7E22CE;">?</div>
               <div class="inquiry-card-text">
@@ -1588,7 +1807,7 @@
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-          <div class="timeline-milestone-card" style="margin: 0;">
+          <div class="timeline-milestone-card" style="margin: 0;" data-cursor="explore">
             <span class="journal-stamp">STUDENT GOVERNANCE</span>
             <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.75rem 0 0.5rem 0;">Student Lead & Sports Day</h3>
             <p style="font-size: 0.92rem; color: var(--ink-secondary); line-height: 1.55;">
@@ -1596,7 +1815,7 @@
             </p>
           </div>
 
-          <div class="timeline-milestone-card" style="margin: 0;">
+          <div class="timeline-milestone-card" style="margin: 0;" data-cursor="explore">
             <span class="journal-stamp indigo">ETHICS VERTICAL</span>
             <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.75rem 0 0.5rem 0;">Joint Secretary Role</h3>
             <p style="font-size: 0.92rem; color: var(--ink-secondary); line-height: 1.55;">
@@ -1604,7 +1823,7 @@
             </p>
           </div>
 
-          <div class="timeline-milestone-card" style="margin: 0;">
+          <div class="timeline-milestone-card" style="margin: 0;" data-cursor="explore">
             <span class="journal-stamp forest">PROTOSEM COHORTS</span>
             <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.75rem 0 0.5rem 0;">Interdisciplinary Teamwork</h3>
             <p style="font-size: 0.92rem; color: var(--ink-secondary); line-height: 1.55;">
@@ -1642,7 +1861,7 @@
           </div>
 
           <div style="text-align: center;">
-            <div class="diary-featured-photo-frame" style="width: 240px; padding: 8px 8px 14px 8px;" data-lightbox data-slot-id="scholarship_cert">
+            <div class="diary-featured-photo-frame" style="width: 240px; padding: 8px 8px 14px 8px;" data-lightbox data-slot-id="scholarship_cert" data-cursor="explore">
               <div class="featured-photo-img-box" style="height: 150px;">
                 <img src="assets/images/scholarship-cert.svg" alt="Mahatma Gandhi Scholarship Certificate Preview">
               </div>
@@ -1671,7 +1890,7 @@
           </p>
 
           <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <button class="btn btn-primary" data-open-resume id="resume-download-btn">
+            <button class="btn btn-primary" data-open-resume id="resume-download-btn" data-cursor="arrow">
               <span>View / Download Resume</span>
               <span class="btn-icon">📄</span>
             </button>
@@ -1734,7 +1953,7 @@
           </p>
 
           <div class="contact-links-grid">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-channel-card" id="contact-linkedin-link">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-channel-card" id="contact-linkedin-link" data-cursor="arrow">
               <div class="contact-channel-icon">in</div>
               <div>
                 <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #A8A29E; text-transform: uppercase;">Professional Network</div>
@@ -1743,7 +1962,7 @@
               </div>
             </a>
 
-            <a href="mailto:udayaritthi@example.com" class="contact-channel-card" id="contact-email-link" onclick="copyTextToClipboard('udayaritthi@example.com', 'Email'); return false;">
+            <a href="mailto:udayaritthi@example.com" class="contact-channel-card" id="contact-email-link" onclick="copyTextToClipboard('udayaritthi@example.com', 'Email'); return false;" data-cursor="arrow">
               <div class="contact-channel-icon">✉</div>
               <div>
                 <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #A8A29E; text-transform: uppercase;">Direct Email</div>
@@ -1752,7 +1971,7 @@
               </div>
             </a>
 
-            <a href="#resume" class="contact-channel-card" data-open-resume id="contact-resume-link">
+            <a href="#resume" class="contact-channel-card" data-open-resume id="contact-resume-link" data-cursor="arrow">
               <div class="contact-channel-icon">📄</div>
               <div>
                 <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #A8A29E; text-transform: uppercase;">Curriculum Vitae</div>
@@ -1762,6 +1981,24 @@
             </a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 14: THE FINAL VISUAL MOMENT
+         ========================================================================= -->
+    <section class="final-closing-section">
+      <div class="container container-narrow">
+        <h2 class="final-closing-title">“And the next question is…?”</h2>
+        <div class="final-signature-name dynamic-user-name">Udayaritthi</div>
+
+        <div class="final-morphing-glyph" data-cursor="question" title="Click to explore the next question">
+          ?
+        </div>
+
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-muted); margin-top: 1.5rem; letter-spacing: 0.1em; text-transform: uppercase;">
+          [ STILL QUESTIONING • STILL EXPLORING • STILL LEARNING ]
+        </p>
       </div>
     </section>
   </main>
@@ -1901,11 +2138,14 @@
   </div>
 
   <!-- Scripts -->
+  <script src="js/custom-cursor.js"></script>
   <script src="js/question-path.js"></script>
+  <script src="js/textile-thread.js"></script>
   <script src="js/value-chains.js"></script>
   <script src="js/skills-network.js"></script>
   <script src="js/journal-manager.js"></script>
   <script src="js/interactions.js"></script>
+  <script src="js/elevated-interactions.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
