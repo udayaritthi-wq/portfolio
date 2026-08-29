@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Udayaritthi | "Live with the Question" — Personal Story & BBA Portfolio</title>
+  <meta name="description" content="Visual journal, personal story, and professional BBA portfolio of Udayaritthi. Built around the philosophy: 'Live with the Question' — exploring business, law, research, traditional industries, and innovation.">
+  <meta name="author" content="Udayaritthi">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Udayaritthi | Live with the Question — BBA Portfolio">
+  <meta property="og:description" content="Curious by nature. Driven to find solutions. A personal story, visual journal, and professional portfolio.">
+  <meta property="og:type" content="website">
+
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/design-tokens.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/protosem.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       EDITORIAL NAVIGATION RIBBON
+       ========================================================================= -->
+  <header class="editorial-nav-wrapper">
+    <div class="editorial-nav">
+      <a href="#hero" class="nav-brand" id="nav-brand-link">
+        <div class="brand-mark">?</div>
+        <div>
+          <span class="brand-name dynamic-user-name">Udayaritthi</span>
+          <span class="brand-badge">BBA EXPLORER</span>
+        </div>
+      </a>
+
+      <!-- Chapter Links -->
+      <ul class="nav-chapters" id="nav-chapters-list">
+        <li><a href="#about" class="nav-link"><span class="chapter-num">01</span> About</a></li>
+        <li><a href="#journey" class="nav-link"><span class="chapter-num">02</span> Journey</a></li>
+        <li><a href="#experience" class="nav-link"><span class="chapter-num">03</span> Experience</a></li>
+        <li><a href="#ethics" class="nav-link"><span class="chapter-num">04</span> Ethics</a></li>
+        <li><a href="#projects" class="nav-link"><span class="chapter-num">05</span> Projects</a></li>
+        <li><a href="#protosem" class="nav-link"><span class="chapter-num">06</span> Protosem</a></li>
+        <li><a href="#skills" class="nav-link"><span class="chapter-num">07</span> Skills</a></li>
+        <li><a href="#curiosities" class="nav-link"><span class="chapter-num">08</span> Curiosities</a></li>
+        <li><a href="#contact" class="nav-link"><span class="chapter-num">09</span> Connect</a></li>
+      </ul>
+
+      <!-- CTA Actions -->
+      <div class="nav-actions">
+        <a href="#resume" class="nav-cta" data-open-resume id="nav-resume-btn">Resume</a>
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle-btn" aria-label="Toggle navigation menu">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-track">
+      <div class="reading-progress-bar"></div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-nav-drawer" style="display: none; background: var(--bg-card); padding: 1.5rem; border-bottom: 2px solid var(--accent-saffron);">
+    <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.75rem;">
+      <li><a href="#about" class="nav-link">01 / About Me</a></li>
+      <li><a href="#journey" class="nav-link">02 / My Journey</a></li>
+      <li><a href="#experience" class="nav-link">03 / Experience (Arvind Chettinad Snacks)</a></li>
+      <li><a href="#ethics" class="nav-link">04 / Leadership (Ethics & Values)</a></li>
+      <li><a href="#projects" class="nav-link">05 / Projects (Indian Textile Industry)</a></li>
+      <li><a href="#protosem" class="nav-link">06 / Protosem Field Journal</a></li>
+      <li><a href="#skills" class="nav-link">07 / Skills Constellation</a></li>
+      <li><a href="#curiosities" class="nav-link">08 / Things That Make Me Curious</a></li>
+      <li><a href="#contact" class="nav-link">09 / Let's Connect</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- =========================================================================
+         HERO SECTION
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Hero Left Column: Editorial Statement -->
+          <div class="hero-content">
+            <div class="hero-editorial-badge">
+              <span class="journal-stamp">FIELD JOURNAL NO. 01</span>
+              <span class="hand-note">“Live with the question” <span class="hand-note-arrow">↗</span></span>
+            </div>
+
+            <h1 class="hero-title dynamic-user-name">Udayaritthi</h1>
+            <p class="hero-subtitle">Curious by Nature. Driven to Find Solutions.</p>
+
+            <div style="margin: 1.75rem 0 2.25rem 0;">
+              <blockquote class="editorial-quote">
+                “I’m curious by nature. I like asking questions, exploring how things work, and finding meaningful solutions to the problems around me.”
+              </blockquote>
+            </div>
+
+            <!-- Dynamic Question-to-Path Interactive Canvas Widget -->
+            <div style="background: var(--bg-card); border: 1px solid var(--pencil-line); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 2.25rem; box-shadow: var(--shadow-sm);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-saffron); text-transform: uppercase; letter-spacing: 0.1em;">THE CURIOSITY SYSTEM</span>
+                <span class="hand-note" style="font-size: 1rem; color: var(--ink-muted);">Interactive path ↓</span>
+              </div>
+              <div style="width: 100%; height: 60px; position: relative;">
+                <canvas id="question-path-canvas"></canvas>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; color: var(--ink-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.35rem;">
+                <span>? Question</span>
+                <span>→ Explore</span>
+                <span>→ Research</span>
+                <span>→ Create</span>
+                <span>→ Learn</span>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="#journey" class="btn btn-primary" id="hero-explore-btn">
+                <span>Explore My Journey</span>
+                <span class="btn-icon">↓</span>
+              </a>
+              <a href="#resume" class="btn btn-secondary" data-open-resume id="hero-resume-btn">
+                <span>View My Resume</span>
+                <span class="btn-icon">📄</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Polaroid Portrait -->
+          <div class="hero-portrait-col">
+            <div class="hero-portrait-card" data-lightbox data-slot-id="hero_portrait">
+              <div class="washi-tape"></div>
+              <div class="hero-portrait-img-box">
+                <img src="assets/images/hero-portrait.svg" alt="Udayaritthi - BBA Student & Explorer" id="hero-portrait-img">
+              </div>
+              <div class="hero-portrait-caption">
+                “Questioning the ordinary, uncovering the insights.”
+              </div>
+              <div style="margin-top: 10px; text-align: center;">
+                <button class="photo-upload-trigger-btn" data-photo-target="hero_portrait">
+                  📷 Upload / Replace Real Photo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 01: ABOUT ME & "LIVE WITH THE QUESTION"
+         ========================================================================= -->
+    <section class="portfolio-section" id="about" style="background: var(--bg-card-subtle);">
+      <div class="container">
+        <div class="section-header-block">
+          <span class="section-number">01 / ABOUT</span>
+          <h2 class="section-heading">A Little About Me</h2>
+          <p class="section-subheading">A personal narrative of curiosity, structured inquiry, and continuous learning beyond the classroom.</p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <p class="drop-cap" style="font-size: 1.12rem; color: var(--ink-secondary); line-height: 1.75; margin-bottom: 1.25rem;">
+              I am a BBA student who enjoys exploring ideas beyond conventional textbook boundaries. I naturally question things and find deep satisfaction in uncovering the reasoning, systems, and human behaviors operating beneath the surface.
+            </p>
+            <p style="font-size: 1.05rem; color: var(--ink-secondary); line-height: 1.7; margin-bottom: 1.75rem;">
+              Rather than rushing to find quick, superficial answers, I focus on asking sharper questions. I enjoy working with diverse people, dissecting business challenges, researching traditional industries, and articulating clear, data-informed insights that bridge strategy with social impact.
+            </p>
+
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-saffron); margin-bottom: 0.75rem;">
+              WHAT DRIVES MY DAYS:
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.65rem; margin-bottom: 2rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; font-weight: 600; color: var(--ink-primary);">
+                <span style="color: var(--accent-saffron);">✦</span> Asking sharp questions
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; font-weight: 600; color: var(--ink-primary);">
+                <span style="color: var(--accent-saffron);">✦</span> Deep-dive research
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; font-weight: 600; color: var(--ink-primary);">
+                <span style="color: var(--accent-saffron);">✦</span> Exploring perspectives
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; font-weight: 600; color: var(--ink-primary);">
+                <span style="color: var(--accent-saffron);">✦</span> Practical problem solving
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; font-weight: 600; color: var(--ink-primary);">
+                <span style="color: var(--accent-saffron);">✦</span> Cross-team collaboration
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; font-weight: 600; color: var(--ink-primary);">
+                <span style="color: var(--accent-saffron);">✦</span> Presenting complex ideas
+              </div>
+            </div>
+
+            <h4 style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-indigo); margin-bottom: 0.5rem;">
+              CORE INTERESTS & DOMAINS:
+            </h4>
+            <div class="about-interests-pills">
+              <span class="interest-pill">Business Strategy</span>
+              <span class="interest-pill">Law & Governance</span>
+              <span class="interest-pill">Research & Analysis</span>
+              <span class="interest-pill">Leadership</span>
+              <span class="interest-pill">Innovation</span>
+              <span class="interest-pill">Indian Industries & Heritage</span>
+              <span class="interest-pill">Social Issues</span>
+              <span class="interest-pill">Problem Solving</span>
+              <span class="interest-pill">Consumer Behaviour & Retail</span>
+            </div>
+          </div>
+
+          <!-- Marginalia & Journal Aside -->
+          <div>
+            <div class="marginalia" style="margin-bottom: 1.5rem; background: #FFFDF5;">
+              <span class="hand-note saffron">Margin Note:</span>
+              <p style="font-family: var(--font-hand); font-size: 1.25rem; color: var(--ink-secondary); margin: 0.5rem 0 0 0; line-height: 1.35;">
+                “Classrooms provide concepts. Real businesses, communities, and field experiences provide the context.”
+              </p>
+            </div>
+
+            <div style="background: var(--bg-card); border: 1px solid var(--pencil-line); border-radius: var(--radius-lg); padding: 1.75rem; box-shadow: var(--shadow-sm);">
+              <span class="journal-stamp indigo">IDENTITY PROFILE</span>
+              <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin: 0.85rem 0 0.5rem 0;">16 Personalities: Protagonist (ENFJ)</h3>
+              <p style="font-size: 0.92rem; color: var(--ink-muted); line-height: 1.55;">
+                Discovered through self-reflection during Protosem Week 0. Natural inclination towards empathetic leadership, connecting ideas, inspiring teamwork, and driving social initiatives with moral grounding.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Distinctive "LIVE WITH THE QUESTION" Showcase Banner -->
+        <div class="philosophy-banner-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <span class="journal-stamp" style="border-color: var(--accent-turmeric); color: var(--accent-turmeric); background: rgba(217, 155, 38, 0.15);">
+              CENTRAL PHILOSOPHY
+            </span>
+            <span class="hand-note" style="color: var(--accent-turmeric); font-size: 1.35rem;">
+              Inspired by ZEN Pencils ✦
+            </span>
+          </div>
+
+          <h2 class="philosophy-banner-text" style="color: #FAF7F2;">
+            “Live with the Question.”
+          </h2>
+
+          <p style="font-family: var(--font-serif); font-size: clamp(1.15rem, 2vw, 1.45rem); font-style: italic; color: #E7E5E4; max-width: 850px; line-height: 1.5; margin: 1.25rem 0 2rem 0;">
+            I don't believe that having every answer immediately is the goal. I believe that good questions lead to curiosity, curiosity leads to exploration, and exploration leads to better understanding and enduring solutions.
+          </p>
+
+          <!-- 5-Stage Transformation Visual Grid -->
+          <div class="philosophy-arc-container" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12);">
+            <div class="philosophy-arc-steps">
+              <div class="arc-step">
+                <div class="arc-icon-box" style="background: rgba(217, 83, 47, 0.25); color: #FF8A65; border-color: #D9532F;">01</div>
+                <div>
+                  <div class="arc-text-title" style="color: #FFFFFF;">Question</div>
+                  <div class="arc-text-desc" style="color: #A8A29E;">Ignites curiosity</div>
+                </div>
+              </div>
+
+              <div class="arc-connector"></div>
+
+              <div class="arc-step">
+                <div class="arc-icon-box" style="background: rgba(31, 78, 91, 0.4); color: #7DD3FC; border-color: #1F4E5B;">02</div>
+                <div>
+                  <div class="arc-text-title" style="color: #FFFFFF;">Explore</div>
+                  <div class="arc-text-desc" style="color: #A8A29E;">Broadens perspective</div>
+                </div>
+              </div>
+
+              <div class="arc-connector"></div>
+
+              <div class="arc-step">
+                <div class="arc-icon-box" style="background: rgba(217, 155, 38, 0.3); color: #FDE047; border-color: #D99B26;">03</div>
+                <div>
+                  <div class="arc-text-title" style="color: #FFFFFF;">Research</div>
+                  <div class="arc-text-desc" style="color: #A8A29E;">Uncovers evidence</div>
+                </div>
+              </div>
+
+              <div class="arc-connector"></div>
+
+              <div class="arc-step">
+                <div class="arc-icon-box" style="background: rgba(42, 92, 74, 0.4); color: #86EFAC; border-color: #2A5C4A;">04</div>
+                <div>
+                  <div class="arc-text-title" style="color: #FFFFFF;">Create</div>
+                  <div class="arc-text-desc" style="color: #A8A29E;">Builds prototypes</div>
+                </div>
+              </div>
+
+              <div class="arc-connector"></div>
+
+              <div class="arc-step">
+                <div class="arc-icon-box" style="background: rgba(126, 34, 206, 0.35); color: #D8B4FE; border-color: #7E22CE;">05</div>
+                <div>
+                  <div class="arc-text-title" style="color: #FFFFFF;">Learn</div>
+                  <div class="arc-text-desc" style="color: #A8A29E;">Integrates insight</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 02: MY JOURNEY (INTERACTIVE TIMELINE)
+         ========================================================================= -->
+    <section class="portfolio-section" id="journey">
+      <div class="container">
+        <div class="section-header-block">
+          <span class="section-number">02 / JOURNEY</span>
+          <h2 class="section-heading">My Developmental Journey</h2>
+          <p class="section-subheading">From stepping up in school leadership to developing multi-disciplinary business foundations in BBA.</p>
+        </div>
+
+        <div class="timeline-track-wrapper">
+          <div class="timeline-vertical-line"></div>
+
+          <!-- School Milestone -->
+          <div class="timeline-milestone-card">
+            <div class="timeline-node-marker"></div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+              <span class="journal-stamp">FOUNDATION YEARS</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-muted);">SCHOOL LEADERSHIP</span>
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink-primary); margin-bottom: 0.5rem;">
+              Where I First Learned to Take Responsibility
+            </h3>
+            <p style="font-size: 1rem; color: var(--ink-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
+              Serving as a Student Lead provided my first hands-on immersion into responsibility and organizational teamwork. I spearheaded and coordinated school-wide Sports Day events and took active initiative in Commerce-related symposiums.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <span class="interest-pill" style="font-size: 0.75rem; background: var(--bg-secondary);">Leadership</span>
+              <span class="interest-pill" style="font-size: 0.75rem; background: var(--bg-secondary);">Coordination</span>
+              <span class="interest-pill" style="font-size: 0.75rem; background: var(--bg-secondary);">Responsibility</span>
+              <span class="interest-pill" style="font-size: 0.75rem; background: var(--bg-secondary);">Teamwork</span>
+              <span class="interest-pill" style="font-size: 0.75rem; background: var(--bg-secondary);">Confidence</span>
+            </div>
+          </div>
+
+          <!-- BBA Milestone -->
+          <div class="timeline-milestone-card">
+            <div class="timeline-node-marker"></div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+              <span class="journal-stamp indigo">UNDERGRADUATE STUDIES</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-muted);">BACHELOR OF BUSINESS ADMINISTRATION</span>
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink-primary); margin-bottom: 0.5rem;">
+              Building a Comprehensive Business Perspective
+            </h3>
+            <p style="font-size: 1rem; color: var(--ink-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
+              Immersed in structured frameworks across business disciplines, learning how strategy, legal compliances, quantitative modeling, and human dynamics interplay in competitive markets.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.65rem; margin-bottom: 1.5rem;">
+              <div style="background: var(--bg-card-subtle); padding: 0.6rem 0.8rem; border-radius: var(--radius-xs); border: 1px solid var(--pencil-line); font-size: 0.88rem; font-weight: 600;">
+                📊 Management & Strategy
+              </div>
+              <div style="background: var(--bg-card-subtle); padding: 0.6rem 0.8rem; border-radius: var(--radius-xs); border: 1px solid var(--pencil-line); font-size: 0.88rem; font-weight: 600;">
+                📈 Accounting & Finance
+              </div>
+              <div style="background: var(--bg-card-subtle); padding: 0.6rem 0.8rem; border-radius: var(--radius-xs); border: 1px solid var(--pencil-line); font-size: 0.88rem; font-weight: 600;">
+                🌐 Economics & Markets
+              </div>
+              <div style="background: var(--bg-card-subtle); padding: 0.6rem 0.8rem; border-radius: var(--radius-xs); border: 1px solid var(--pencil-line); font-size: 0.88rem; font-weight: 600;">
+                📣 Marketing & Consumer Behaviour
+              </div>
+              <div style="background: var(--bg-card-subtle); padding: 0.6rem 0.8rem; border-radius: var(--radius-xs); border: 1px solid var(--pencil-line); font-size: 0.88rem; font-weight: 600;">
+                ⚖️ Business Law & Governance
+              </div>
+              <div style="background: var(--bg-card-subtle); padding: 0.6rem 0.8rem; border-radius: var(--radius-xs); border: 1px solid var(--pencil-line); font-size: 0.88rem; font-weight: 600;">
+                🔢 Quantitative Techniques
+              </div>
+              <div style="background: var(--bg-card-subtle); padding: 0.6rem 0.8rem; border-radius: var(--radius-xs); border: 1px solid var(--pencil-line); font-size: 0.88rem; font-weight: 600;">
+                ⚙️ Operations & Supply Chain
+              </div>
+              <div style="background: var(--bg-card-subtle); padding: 0.6rem 0.8rem; border-radius: var(--radius-xs); border: 1px solid var(--pencil-line); font-size: 0.88rem; font-weight: 600;">
+                🔍 Applied Business Research
+              </div>
+            </div>
+
+            <!-- Previews linking to detailed sections -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
+              <a href="#experience" style="text-decoration: none; background: var(--bg-secondary); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--pencil-line-dark); display: block; transition: all var(--transition-fast);">
+                <div style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-saffron);">INTERNSHIP MILESTONE →</div>
+                <div style="font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--ink-primary); margin: 0.25rem 0;">Arvind Chettinad Snacks</div>
+                <div style="font-size: 0.85rem; color: var(--ink-muted);">Production, FIFO inventory, packaging & distribution operations.</div>
+              </a>
+
+              <a href="#ethics" style="text-decoration: none; background: var(--bg-secondary); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--pencil-line-dark); display: block; transition: all var(--transition-fast);">
+                <div style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-indigo);">LEADERSHIP ROLE →</div>
+                <div style="font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--ink-primary); margin: 0.25rem 0;">Joint Secretary — Ethics & Values</div>
+                <div style="font-size: 0.85rem; color: var(--ink-muted);">Planning, coordination, escape rooms & CARE 360 community outreach.</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 03: EXPERIENCE — ARVIND CHETTINAD SNACKS
+         ========================================================================= -->
+    <section class="portfolio-section" id="experience" style="background: var(--bg-card-subtle);">
+      <div class="container">
+        <div class="section-header-block">
+          <span class="section-number">03 / EXPERIENCE</span>
+          <h2 class="section-heading">Arvind Chettinad Snacks</h2>
+          <p class="section-subheading">Practical business immersion into batch production, materials management, FIFO inventory control, and retail supply operations.</p>
+        </div>
+
+        <!-- 3 Core Domains of Exposure -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+          <div class="inquiry-card">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <span class="journal-stamp">PRODUCTION</span>
+              </div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink-primary); margin-bottom: 0.75rem;">Batch Processing & Flow</h3>
+              <ul class="journal-happenings-list">
+                <li>Commercial batch manufacturing methods</li>
+                <li>Industrial frying and temperature control</li>
+                <li>Processing machinery and extruder lines</li>
+                <li>Continuous throughput and production pacing</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inquiry-card">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <span class="journal-stamp indigo">MATERIALS</span>
+              </div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink-primary); margin-bottom: 0.75rem;">Materials & FIFO Inventory</h3>
+              <ul class="journal-happenings-list">
+                <li>Agricultural ingredient sourcing and grading</li>
+                <li>Strict First-In, First-Out (FIFO) storage</li>
+                <li>Inventory shrinkage and stock control</li>
+                <li>Safe materials handling protocols</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inquiry-card">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <span class="journal-stamp forest">OPERATIONS</span>
+              </div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink-primary); margin-bottom: 0.75rem;">Quality, Safety & Logistics</h3>
+              <ul class="journal-happenings-list">
+                <li>Automated packaging and batch coding</li>
+                <li>Moisture and oil quality testing</li>
+                <li>Fleet dispatch and route protection</li>
+                <li>Workplace safety and retail distribution</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Supply Chain Flow Visual -->
+        <div class="value-chain-interactive">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-saffron); margin: 0;">
+              Interactive Operational Flow (Click to explore)
+            </h4>
+            <span class="hand-note saffron">Real business supply chain ✦</span>
+          </div>
+
+          <div class="value-chain-flow" id="snacks-chain-flow">
+            <div class="chain-node active" data-stage="raw">
+              <span class="chain-node-num">01</span>
+              <span class="chain-node-title">Raw Materials</span>
+            </div>
+            <div class="chain-node" data-stage="production">
+              <span class="chain-node-num">02</span>
+              <span class="chain-node-title">Production</span>
+            </div>
+            <div class="chain-node" data-stage="quality">
+              <span class="chain-node-num">03</span>
+              <span class="chain-node-title">Quality</span>
+            </div>
+            <div class="chain-node" data-stage="packaging">
+              <span class="chain-node-num">04</span>
+              <span class="chain-node-title">Packaging</span>
+            </div>
+            <div class="chain-node" data-stage="transportation">
+              <span class="chain-node-num">05</span>
+              <span class="chain-node-title">Transportation</span>
+            </div>
+            <div class="chain-node" data-stage="retail">
+              <span class="chain-node-num">06</span>
+              <span class="chain-node-title">Retail</span>
+            </div>
+          </div>
+
+          <div class="chain-detail-box" id="snacks-detail-box">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--accent-saffron);" id="snacks-detail-num">STAGE 01</span>
+            <h3 class="chain-detail-title" id="snacks-detail-title">Raw Materials & Inventory Management</h3>
+            <p class="chain-detail-desc" id="snacks-detail-desc">
+              Rigorous sourcing of agricultural ingredients, rice flours, pulses, spices, and cooking oils. Focus on strict FIFO (First-In, First-Out) inventory principles, stock turnover monitoring, and raw materials handling to ensure pristine ingredient freshness.
+            </p>
+            <div class="chain-tags-list" id="snacks-detail-tags">
+              <span class="chain-tag">FIFO Strategy</span>
+              <span class="chain-tag">Raw Ingredient Sourcing</span>
+              <span class="chain-tag">Stock Control</span>
+              <span class="chain-tag">Material Handling</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo Gallery Slots for Arvind Chettinad Snacks -->
+        <div style="margin-top: 3rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-primary); margin: 0;">
+              Internship Visual Gallery
+            </h4>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-muted);">Click photos for full view</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="internship_photo_1">
+              <div class="featured-photo-img-box" style="height: 220px;">
+                <img src="assets/images/snacks-internship.svg" alt="Arvind Chettinad Snacks - Batch Processing Facility">
+              </div>
+              <div class="featured-photo-caption">Production line & batch frying units</div>
+              <div style="text-align: center; margin-top: 6px;">
+                <button class="photo-upload-trigger-btn" data-photo-target="internship_photo_1">📷 Replace Photo 1</button>
+              </div>
+            </div>
+
+            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="internship_photo_2">
+              <div class="featured-photo-img-box" style="height: 220px;">
+                <img src="assets/images/snacks-internship.svg" alt="Materials Handling and FIFO Inventory Store">
+              </div>
+              <div class="featured-photo-caption">FIFO inventory & materials storage</div>
+              <div style="text-align: center; margin-top: 6px;">
+                <button class="photo-upload-trigger-btn" data-photo-target="internship_photo_2">📷 Replace Photo 2</button>
+              </div>
+            </div>
+
+            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="internship_photo_3">
+              <div class="featured-photo-img-box" style="height: 220px;">
+                <img src="assets/images/snacks-internship.svg" alt="Quality Inspection and Packaging Line">
+              </div>
+              <div class="featured-photo-caption">Quality checks & packaging distribution</div>
+              <div style="text-align: center; margin-top: 6px;">
+                <button class="photo-upload-trigger-btn" data-photo-target="internship_photo_3">📷 Replace Photo 3</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 04: ETHICS & VALUES VERTICAL (JOINT SECRETARY)
+         ========================================================================= -->
+    <section class="portfolio-section" id="ethics">
+      <div class="container">
+        <div class="section-header-block">
+          <span class="section-number">04 / LEADERSHIP</span>
+          <h2 class="section-heading">Joint Secretary — Ethics & Values Vertical</h2>
+          <p class="section-subheading">Driving ethical decision-making, high-engagement student initiatives, and community impact through structured collaborative leadership.</p>
+        </div>
+
+        <!-- 4-Stage Leadership Visual Process -->
+        <div class="philosophy-arc-container" style="margin-bottom: 3.5rem;">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--accent-indigo); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem;">
+            LEADERSHIP EXECUTION FRAMEWORK
+          </div>
+          <div class="philosophy-arc-steps">
+            <div class="arc-step">
+              <div class="arc-icon-box">01</div>
+              <div>
+                <div class="arc-text-title">Planning</div>
+                <div class="arc-text-desc">Concept & frameworks</div>
+              </div>
+            </div>
+
+            <div class="arc-connector"></div>
+
+            <div class="arc-step">
+              <div class="arc-icon-box">02</div>
+              <div>
+                <div class="arc-text-title">Coordination</div>
+                <div class="arc-text-desc">Team & resource flow</div>
+              </div>
+            </div>
+
+            <div class="arc-connector"></div>
+
+            <div class="arc-step">
+              <div class="arc-icon-box">03</div>
+              <div>
+                <div class="arc-text-title">Execution</div>
+                <div class="arc-text-desc">Live event orchestration</div>
+              </div>
+            </div>
+
+            <div class="arc-connector"></div>
+
+            <div class="arc-step">
+              <div class="arc-icon-box">04</div>
+              <div>
+                <div class="arc-text-title">Reflection</div>
+                <div class="arc-text-desc">Impact assessment</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rich Visual Event Showcase Cards -->
+        <div class="ethics-events-grid">
+          <!-- Crack the Case -->
+          <div class="ethics-event-card">
+            <div class="ethics-card-media" data-lightbox data-slot-id="event_photo_1">
+              <img src="assets/images/ethics-crack-the-case.svg" alt="Crack the Case Event">
+            </div>
+            <div class="ethics-card-content">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <span class="journal-stamp">MYSTERY & LOGIC</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="event_photo_1">📷 Replace</button>
+              </div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink-primary); margin-bottom: 0.5rem;">Crack the Case</h3>
+              <p style="font-size: 0.92rem; color: var(--ink-secondary); line-height: 1.55;">
+                A murder-mystery-inspired activity requiring keen observational skills, rigorous deductive problem solving, and ethical decision-making under time pressure.
+              </p>
+            </div>
+          </div>
+
+          <!-- Virtue Verdicts -->
+          <div class="ethics-event-card">
+            <div class="ethics-card-media" data-lightbox data-slot-id="event_photo_2">
+              <img src="assets/images/ethics-virtue-verdicts.svg" alt="Virtue Verdicts Event">
+            </div>
+            <div class="ethics-card-content">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <span class="journal-stamp indigo">ETHICAL JUDGEMENT</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="event_photo_2">📷 Replace</button>
+              </div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink-primary); margin-bottom: 0.5rem;">Virtue Verdicts</h3>
+              <p style="font-size: 0.92rem; color: var(--ink-secondary); line-height: 1.55;">
+                An interactive dilemma simulation focused on moral choices, legal boundaries, personal ethics, and nuanced decision matrices in professional scenarios.
+              </p>
+            </div>
+          </div>
+
+          <!-- Ethics Escape Room -->
+          <div class="ethics-event-card">
+            <div class="ethics-card-media" data-lightbox data-slot-id="event_photo_3">
+              <img src="assets/images/ethics-escape-room.svg" alt="Ethics Escape Room">
+            </div>
+            <div class="ethics-card-content">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <span class="journal-stamp forest">TEAM PUZZLE</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="event_photo_3">📷 Replace</button>
+              </div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink-primary); margin-bottom: 0.5rem;">Ethics Escape Room</h3>
+              <p style="font-size: 0.92rem; color: var(--ink-secondary); line-height: 1.55;">
+                A collaborative problem-solving experience where teams navigate interconnected rooms by resolving moral paradoxes, cracking clues, and building consensus.
+              </p>
+            </div>
+          </div>
+
+          <!-- Gratitude Day -->
+          <div class="ethics-event-card">
+            <div class="ethics-card-media" data-lightbox data-slot-id="event_photo_4">
+              <img src="assets/images/ethics-gratitude.svg" alt="Gratitude Day Display">
+            </div>
+            <div class="ethics-card-content">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <span class="journal-stamp">COMMUNITY CULTURE</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="event_photo_4">📷 Replace</button>
+              </div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink-primary); margin-bottom: 0.5rem;">Gratitude Day</h3>
+              <p style="font-size: 0.92rem; color: var(--ink-secondary); line-height: 1.55;">
+                A campus-wide initiative encouraging students and staff to reflect on and express appreciation through a shared, vibrant interactive message installation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pongal Initiative -->
+          <div class="ethics-event-card">
+            <div class="ethics-card-media" data-lightbox data-slot-id="event_photo_5">
+              <img src="assets/images/ethics-pongal.svg" alt="Pongal Initiative Celebration">
+            </div>
+            <div class="ethics-card-content">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <span class="journal-stamp indigo">HERITAGE</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="event_photo_5">📷 Replace</button>
+              </div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink-primary); margin-bottom: 0.5rem;">Pongal Initiative</h3>
+              <p style="font-size: 0.92rem; color: var(--ink-secondary); line-height: 1.55;">
+                A cultural initiative honoring agricultural roots, traditional heritage, and community bonding during the harvest celebration of Pongal.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARE 360 -->
+          <div class="ethics-event-card" style="border-color: var(--accent-saffron);">
+            <div class="ethics-card-media" data-lightbox data-slot-id="event_photo_care360">
+              <img src="assets/images/ethics-care360.svg" alt="CARE 360 Community Initiative">
+            </div>
+            <div class="ethics-card-content">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <span class="journal-stamp" style="background: var(--accent-saffron); color: #fff;">INCLUSIVE OUTREACH</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="event_photo_care360">📷 Replace</button>
+              </div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink-primary); margin-bottom: 0.5rem;">CARE 360</h3>
+              <p style="font-size: 0.92rem; color: var(--ink-secondary); line-height: 1.55; margin-bottom: 0.75rem;">
+                A deeply meaningful community-focused initiative dedicated to engaging with and supporting:
+              </p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+                <span class="chain-tag">Sanitation Workers</span>
+                <span class="chain-tag">Neurodiverse Groups</span>
+                <span class="chain-tag">Elderly Care</span>
+                <span class="chain-tag">Children</span>
+                <span class="chain-tag">Tribal Communities</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 05: PROJECTS — INDIAN TRADITIONAL WEAR & TEXTILE INDUSTRY
+         ========================================================================= -->
+    <section class="portfolio-section" id="projects" style="background: var(--bg-card-subtle);">
+      <div class="container">
+        <div class="section-header-block">
+          <span class="section-number">05 / PROJECTS</span>
+          <h2 class="section-heading">Indian Traditional Wear & Textile Industry</h2>
+          <p class="section-subheading">A comprehensive research-based academic project analyzing the Indian ethnic-wear ecosystem, value-chain intermediaries, turnover metrics, and modern retail dynamics.</p>
+        </div>
+
+        <div class="textile-project-sheet">
+          <div class="textile-pattern-strip"></div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; margin-top: 0.75rem;">
+            <div>
+              <span class="journal-stamp indigo">ACADEMIC RESEARCH PROJECT</span>
+              <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin: 0.5rem 0 0.25rem 0;">Textile Value Chain & Ethnic Wear Ecosystem</h3>
+            </div>
+            <span class="hand-note turmeric" style="font-size: 1.3rem;">From farm to festive wardrobe ✦</span>
+          </div>
+
+          <!-- Research Transformation Arc -->
+          <div style="background: var(--bg-primary); border: 1px solid var(--pencil-line); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 2.25rem;">
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-crimson); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+              RESEARCH METHODOLOGY TRANSFORMATION
+            </div>
+            <div style="display: flex; justify-content: space-between; font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--ink-primary); flex-wrap: wrap; gap: 0.5rem;">
+              <span>01. QUESTION</span>
+              <span>→</span>
+              <span>02. RESEARCH</span>
+              <span>→</span>
+              <span>03. ANALYSIS</span>
+              <span>→</span>
+              <span>04. PRESENTATION</span>
+              <span>→</span>
+              <span>05. INSIGHT</span>
+            </div>
+          </div>
+
+          <!-- Interactive Textile Value Chain Simulator -->
+          <div class="value-chain-interactive" style="box-shadow: none; border-color: var(--pencil-line-dark);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+              <h4 style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-crimson); margin: 0;">
+                8-Stage Textile Value Chain (Click each stage)
+              </h4>
+            </div>
+
+            <div class="value-chain-flow" id="textile-chain-flow" style="grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));">
+              <div class="chain-node active" data-stage="cotton">
+                <span class="chain-node-num">01</span>
+                <span class="chain-node-title">Cotton</span>
+              </div>
+              <div class="chain-node" data-stage="processing">
+                <span class="chain-node-num">02</span>
+                <span class="chain-node-title">Processing</span>
+              </div>
+              <div class="chain-node" data-stage="spinning">
+                <span class="chain-node-num">03</span>
+                <span class="chain-node-title">Spinning</span>
+              </div>
+              <div class="chain-node" data-stage="weaving">
+                <span class="chain-node-num">04</span>
+                <span class="chain-node-title">Weaving</span>
+              </div>
+              <div class="chain-node" data-stage="manufacturing">
+                <span class="chain-node-num">05</span>
+                <span class="chain-node-title">Garmenting</span>
+              </div>
+              <div class="chain-node" data-stage="brands">
+                <span class="chain-node-num">06</span>
+                <span class="chain-node-title">Brands</span>
+              </div>
+              <div class="chain-node" data-stage="retail">
+                <span class="chain-node-num">07</span>
+                <span class="chain-node-title">Retail</span>
+              </div>
+              <div class="chain-node" data-stage="consumer">
+                <span class="chain-node-num">08</span>
+                <span class="chain-node-title">Consumer</span>
+              </div>
+            </div>
+
+            <div class="chain-detail-box" id="textile-detail-box">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--accent-crimson);" id="textile-detail-num">STAGE 01</span>
+              <h3 class="chain-detail-title" id="textile-detail-title">Cotton Sourcing & Raw Fibre</h3>
+              <p class="chain-detail-desc" id="textile-detail-desc">
+                The value chain starts at the agricultural base with cotton harvesting, grading staple length, fibre strength evaluation, and initial mandi pricing dynamics.
+              </p>
+              <div class="chain-tags-list" id="textile-detail-tags">
+                <span class="chain-tag">Raw Cotton</span>
+                <span class="chain-tag">Staple Length</span>
+                <span class="chain-tag">Mandi Pricing</span>
+                <span class="chain-tag">Agricultural Sourcing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Research Insights Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem;">
+            <div style="background: var(--bg-primary); border: 1px solid var(--pencil-line); border-radius: var(--radius-md); padding: 1.5rem;">
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 0.5rem;">Intermediaries & Margins</h4>
+              <p style="font-size: 0.9rem; color: var(--ink-secondary); line-height: 1.55;">
+                Detailed analysis of yarn brokers, fabric aggregators, and commission agents who absorb working capital risks across the fragmented textile landscape.
+              </p>
+            </div>
+
+            <div style="background: var(--bg-primary); border: 1px solid var(--pencil-line); border-radius: var(--radius-md); padding: 1.5rem;">
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 0.5rem;">Brand Players & Turnover</h4>
+              <p style="font-size: 0.9rem; color: var(--ink-secondary); line-height: 1.55;">
+                Researching market turnover, category expansion, bridal ethnic trends, and revenue strategies of organized market leaders versus regional heritage players.
+              </p>
+            </div>
+
+            <div style="background: var(--bg-primary); border: 1px solid var(--pencil-line); border-radius: var(--radius-md); padding: 1.5rem;">
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 0.5rem;">Craftsmanship vs. Modern Scale</h4>
+              <p style="font-size: 0.9rem; color: var(--ink-secondary); line-height: 1.55;">
+                Balancing artisanal handloom heritage, intricate zari embroidery, and GI tags with modern high-speed powerloom efficiency and e-commerce distribution.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project Photos -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem;">
+            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="project_photo_1">
+              <div class="featured-photo-img-box" style="height: 220px;">
+                <img src="assets/images/textile-research.svg" alt="Textile Value Chain Research Deck">
+              </div>
+              <div class="featured-photo-caption">Sector presentation poster & value chain findings</div>
+              <div style="text-align: center; margin-top: 6px;">
+                <button class="photo-upload-trigger-btn" data-photo-target="project_photo_1">📷 Replace Project Photo 1</button>
+              </div>
+            </div>
+
+            <div class="diary-featured-photo-frame" data-lightbox data-slot-id="project_photo_2">
+              <div class="featured-photo-img-box" style="height: 220px;">
+                <img src="assets/images/textile-research.svg" alt="Ethnic Wear Market Dynamics">
+              </div>
+              <div class="featured-photo-caption">Market breakdown & turnover analysis</div>
+              <div style="text-align: center; margin-top: 6px;">
+                <button class="photo-upload-trigger-btn" data-photo-target="project_photo_2">📷 Replace Project Photo 2</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 06: PROTOSEM FIELD JOURNAL (DAY-BY-DAY)
+         ========================================================================= -->
+    <section class="protosem-section-wrapper" id="protosem">
+      <div class="journal-texture-bg"></div>
+
+      <div class="container">
+        <div class="section-header-block">
+          <span class="section-number">06 / FIELD JOURNAL</span>
+          <h2 class="section-heading">Protosem: Learning Beyond the Classroom</h2>
+          <p class="section-subheading">A comprehensive, day-by-day visual field journal capturing activities, reflections, tech talks, IDEO case studies, and alumni dialogues.</p>
+        </div>
+
+        <!-- Journal Controls Bar: Week Switcher + Day Pills -->
+        <div class="journal-controls-bar">
+          <div class="week-selector-group">
+            <button class="week-tab-btn active" data-week="all" id="week-tab-all">All Weeks</button>
+            <button class="week-tab-btn" data-week="week0" id="week-tab-0">Week 0 (Getting Started)</button>
+            <button class="week-tab-btn" data-week="week1" id="week-tab-1">Week 1 (Ideas to Industry)</button>
+          </div>
+
+          <div class="day-pills-nav" id="journal-day-pills">
+            <button class="day-pill-btn active" data-day="all">All Days</button>
+            <!-- Week 0 Pills -->
+            <button class="day-pill-btn" data-day="w0-d1" data-week-parent="week0">W0 / Day 1</button>
+            <button class="day-pill-btn" data-day="w0-d2" data-week-parent="week0">W0 / Day 2</button>
+            <button class="day-pill-btn" data-day="w0-d3" data-week-parent="week0">W0 / Day 3</button>
+            <button class="day-pill-btn" data-day="w0-d4" data-week-parent="week0">W0 / Day 4</button>
+            <!-- Week 1 Pills -->
+            <button class="day-pill-btn" data-day="w1-d1" data-week-parent="week1">W1 / Day 1</button>
+            <button class="day-pill-btn" data-day="w1-d2" data-week-parent="week1">W1 / Day 2</button>
+            <button class="day-pill-btn" data-day="w1-d3" data-week-parent="week1">W1 / Day 3</button>
+            <button class="day-pill-btn" data-day="w1-d4" data-week-parent="week1">W1 / Day 4</button>
+            <button class="day-pill-btn" data-day="w1-d5" data-week-parent="week1">W1 / Day 5</button>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             WEEK 0 ENTRIES
+             =================================================================== -->
+
+        <!-- WEEK 0 / DAY 1 -->
+        <article class="journal-entry-card" data-week="week0" data-day="w0-d1" id="entry-w0-d1">
+          <header class="journal-entry-header">
+            <div>
+              <span class="journal-day-badge">WEEK 0 • DAY 1</span>
+              <h3 class="journal-day-title">Breaking the Ice</h3>
+            </div>
+            <div class="journal-stamp-top">
+              <span class="journal-stamp indigo">FIELD LOG 01</span>
+            </div>
+          </header>
+
+          <div class="journal-entry-body-grid">
+            <div class="journal-narrative-col">
+              <div>
+                <div class="journal-block-heading">WHAT HAPPENED</div>
+                <ul class="journal-happenings-list">
+                  <li>Engaged in immersive ice-breaking activities to break initial hesitation.</li>
+                  <li>Stepped out of comfort zones and connected with peers from diverse multidisciplinary backgrounds.</li>
+                  <li>Engaged in open team dialogues to identify everyday challenges and problems faced by society.</li>
+                </ul>
+              </div>
+
+              <div class="journal-reflection-box">
+                <div class="journal-reflection-title">Day Reflection:</div>
+                <p class="journal-reflection-text">
+                  The day gradually moved us from simply getting acquainted with one another to becoming more observant about the world around us and the systemic problems within it.
+                </p>
+              </div>
+            </div>
+
+            <div class="journal-photo-diary-col">
+              <div class="photo-diary-header">
+                <span class="hand-note saffron">Visual Diary • Day 1</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="protosem_w0_d1_hero">📷 Upload Photos</button>
+              </div>
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w0_d1_hero">
+                <div class="washi-tape"></div>
+                <div class="featured-photo-img-box">
+                  <img src="assets/images/protosem-w0-d1.svg" alt="Week 0 Day 1 - Breaking the Ice & Peer Connection">
+                </div>
+                <div class="featured-photo-caption">Breaking the ice: From strangers to collaborators</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- WEEK 0 / DAY 2 -->
+        <article class="journal-entry-card" data-week="week0" data-day="w0-d2" id="entry-w0-d2">
+          <header class="journal-entry-header">
+            <div>
+              <span class="journal-day-badge">WEEK 0 • DAY 2</span>
+              <h3 class="journal-day-title">Understanding Myself</h3>
+            </div>
+            <div class="journal-stamp-top">
+              <span class="journal-stamp">FIELD LOG 02</span>
+            </div>
+          </header>
+
+          <div class="journal-entry-body-grid">
+            <div class="journal-narrative-col">
+              <div>
+                <div class="journal-block-heading">WHAT HAPPENED</div>
+                <ul class="journal-happenings-list">
+                  <li>Completed the comprehensive 16 Personalities Test and discovered my profile as a <strong>Protagonist (ENFJ)</strong>.</li>
+                  <li>Explored curated comic essays from <strong>ZEN Pencils</strong> on philosophy and purpose.</li>
+                  <li>Selected the comic strip <strong>“Live with the Question”</strong> as my core anchor.</li>
+                  <li>Delivered a presentation articulating why questioning and living with ambiguity represents my authentic learning process.</li>
+                </ul>
+              </div>
+
+              <div class="journal-reflection-box">
+                <div class="journal-reflection-title">Day Reflection:</div>
+                <p class="journal-reflection-text">
+                  Connected this self-awareness exercise directly with curiosity and my natural tendency to question, probe underlying principles, and explore rather than immediately settle for quick, comfortable answers.
+                </p>
+              </div>
+
+              <div class="journal-epiphany-banner">
+                <span class="journal-epiphany-label">FOUNDATIONAL MOTIF</span>
+                <div class="journal-epiphany-quote">“Be patient toward all that is unsolved in your heart and try to love the questions themselves.”</div>
+              </div>
+            </div>
+
+            <div class="journal-photo-diary-col">
+              <div class="photo-diary-header">
+                <span class="hand-note indigo">Visual Diary • Day 2</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="protosem_w0_d2_hero">📷 Upload Photos</button>
+              </div>
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w0_d2_hero">
+                <div class="washi-tape"></div>
+                <div class="featured-photo-img-box">
+                  <img src="assets/images/protosem-w0-d2.svg" alt="Week 0 Day 2 - Understanding Myself & Zen Pencils">
+                </div>
+                <div class="featured-photo-caption">16 Personalities: Protagonist & ZEN Pencils presentation</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- WEEK 0 / DAY 3 -->
+        <article class="journal-entry-card" data-week="week0" data-day="w0-d3" id="entry-w0-d3">
+          <header class="journal-entry-header">
+            <div>
+              <span class="journal-day-badge">WEEK 0 • DAY 3</span>
+              <h3 class="journal-day-title">Building the Tower</h3>
+            </div>
+            <div class="journal-stamp-top">
+              <span class="journal-stamp forest">FIELD LOG 03</span>
+            </div>
+          </header>
+
+          <div class="journal-entry-body-grid">
+            <div class="journal-narrative-col">
+              <div>
+                <div class="journal-block-heading">WHAT HAPPENED</div>
+                <ul class="journal-happenings-list">
+                  <li>Participated in the hands-on Spaghetti Tower Engineering Challenge.</li>
+                  <li>Collaborated under tight time constraints to prototype structural integrity using fragile spaghetti sticks and tape.</li>
+                  <li>Focused on iterative design, team communication, experimentation, and structural problem-solving.</li>
+                </ul>
+              </div>
+
+              <!-- Editable Activity Log Area -->
+              <div class="journal-editable-note">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                  <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-turmeric); text-transform: uppercase;">
+                    PERSONAL JOURNAL LOG (EDITABLE & AUTOSAVED):
+                  </span>
+                  <span class="save-indicator" style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-forest); font-weight: 600;"></span>
+                </div>
+                <textarea rows="4" data-note-id="spaghetti-tower-note" placeholder="Click to add more specific personal observations, structural design decisions, or team stories from the Spaghetti Tower activity..."></textarea>
+              </div>
+
+              <div class="journal-reflection-box">
+                <div class="journal-reflection-title">Day Reflection:</div>
+                <p class="journal-reflection-text">
+                  Theoretical ideas collapse without structural experimentation. Quick prototyping and clear team roles matter more than endless abstract debate.
+                </p>
+              </div>
+            </div>
+
+            <div class="journal-photo-diary-col">
+              <div class="photo-diary-header">
+                <span class="hand-note turmeric">Visual Diary • Day 3</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="protosem_w0_d3_hero">📷 Upload Photos</button>
+              </div>
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w0_d3_hero">
+                <div class="washi-tape"></div>
+                <div class="featured-photo-img-box">
+                  <img src="assets/images/protosem-w0-d3.svg" alt="Week 0 Day 3 - Building the Spaghetti Tower Challenge">
+                </div>
+                <div class="featured-photo-caption">Iterative engineering: Spaghetti tower challenge</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- WEEK 0 / DAY 4 -->
+        <article class="journal-entry-card" data-week="week0" data-day="w0-d4" id="entry-w0-d4">
+          <header class="journal-entry-header">
+            <div>
+              <span class="journal-day-badge">WEEK 0 • DAY 4</span>
+              <h3 class="journal-day-title">Learning to Talk to AI</h3>
+            </div>
+            <div class="journal-stamp-top">
+              <span class="journal-stamp indigo">FIELD LOG 04</span>
+            </div>
+          </header>
+
+          <div class="journal-entry-body-grid">
+            <div class="journal-narrative-col">
+              <div>
+                <div class="journal-block-heading">WHAT HAPPENED</div>
+                <ul class="journal-happenings-list">
+                  <li>Attended an interactive Tech Talk conducted by a fellow student on AI Prompting.</li>
+                  <li>Learned the mechanics of how prompt structuring, contextual framing, and precision constraints govern AI generation.</li>
+                  <li>Explored prompt iteration and real-time output refinement.</li>
+                </ul>
+              </div>
+
+              <div class="journal-reflection-box">
+                <div class="journal-reflection-title">Day Reflection:</div>
+                <p class="journal-reflection-text">
+                  AI is not simply a tool that provides static answers; the depth, clarity, and intentionality of how we communicate with it directly determines the quality of insight we receive.
+                </p>
+              </div>
+            </div>
+
+            <div class="journal-photo-diary-col">
+              <div class="photo-diary-header">
+                <span class="hand-note forest">Visual Diary • Day 4</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="protosem_w0_d4_hero">📷 Upload Photos</button>
+              </div>
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w0_d4_hero">
+                <div class="washi-tape"></div>
+                <div class="featured-photo-img-box">
+                  <img src="assets/images/protosem-w0-d4.svg" alt="Week 0 Day 4 - Tech Talk on AI Prompting">
+                </div>
+                <div class="featured-photo-caption">Mastering context: Prompt engineering tech talk</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             WEEK 1 ENTRIES
+             =================================================================== -->
+
+        <!-- WEEK 1 / DAY 1 -->
+        <article class="journal-entry-card" data-week="week1" data-day="w1-d1" id="entry-w1-d1">
+          <header class="journal-entry-header">
+            <div>
+              <span class="journal-day-badge">WEEK 1 • DAY 1</span>
+              <h3 class="journal-day-title">Seeing Problems Differently</h3>
+            </div>
+            <div class="journal-stamp-top">
+              <span class="journal-stamp">FIELD LOG 05</span>
+            </div>
+          </header>
+
+          <div class="journal-entry-body-grid">
+            <div class="journal-narrative-col">
+              <div>
+                <div class="journal-block-heading">WHAT HAPPENED</div>
+                <ul class="journal-happenings-list">
+                  <li><strong>Tech Talk: Instagram Algorithm</strong> — Examined how recommendation architectures influence attention, user engagement, and commerce.</li>
+                  <li><strong>Design Thinking Framework</strong> — Introduced to the 5-stage human-centered model:
+                    <div style="margin-top: 0.35rem; font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; color: var(--accent-saffron);">
+                      Empathise → Define → Ideate → Prototype → Test
+                    </div>
+                  </li>
+                  <li><strong>Sector Selection & Poster Pitch</strong> — Our team selected the <strong>Textile Industry & Indian Ethnic Wear</strong> sector to research and present.</li>
+                </ul>
+              </div>
+
+              <div class="journal-reflection-box">
+                <div class="journal-reflection-title">Day Reflection:</div>
+                <p class="journal-reflection-text">
+                  Looking at Indian traditional wear not merely as clothing, but as a rich tapestry deeply woven with cultural identity, traditional artisan livelihoods, and multi-tiered business economics.
+                </p>
+              </div>
+            </div>
+
+            <div class="journal-photo-diary-col">
+              <div class="photo-diary-header">
+                <span class="hand-note saffron">Visual Diary • Day 1</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="protosem_w1_d1_hero">📷 Upload Photos</button>
+              </div>
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d1_hero">
+                <div class="washi-tape"></div>
+                <div class="featured-photo-img-box">
+                  <img src="assets/images/protosem-w1-d1.svg" alt="Week 1 Day 1 - Design Thinking and Textile Sector Selection">
+                </div>
+                <div class="featured-photo-caption">Sector selection: Indian Textile & Ethnic Wear poster design</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- WEEK 1 / DAY 2 -->
+        <article class="journal-entry-card" data-week="week1" data-day="w1-d2" id="entry-w1-d2">
+          <header class="journal-entry-header">
+            <div>
+              <span class="journal-day-badge">WEEK 1 • DAY 2</span>
+              <h3 class="journal-day-title">Ideas Don't Have to Be Ordinary</h3>
+            </div>
+            <div class="journal-stamp-top">
+              <span class="journal-stamp indigo">FIELD LOG 06</span>
+            </div>
+          </header>
+
+          <div class="journal-entry-body-grid">
+            <div class="journal-narrative-col">
+              <div>
+                <div class="journal-block-heading">WHAT HAPPENED</div>
+                <ul class="journal-happenings-list">
+                  <li><strong>Tech Talk: Power BI</strong> — Hands-on session on transforming raw spreadsheets into visual analytics and dynamic business intelligence dashboards.</li>
+                  <li><strong>IDEO Supermarket Trolley Case Study</strong> — Analyzed how legendary design firm IDEO re-imagined the everyday shopping cart through rapid multidisciplinary prototyping and radical collaboration.</li>
+                </ul>
+              </div>
+
+              <div class="journal-epiphany-banner" style="background: var(--accent-indigo); margin-top: 0;">
+                <span class="journal-epiphany-label" style="color: #7DD3FC;">CORE TAKEAWAY</span>
+                <div class="journal-epiphany-quote">“The idea can be unconventional. The solution has to work.”</div>
+              </div>
+
+              <div class="journal-reflection-box">
+                <div class="journal-reflection-title">Day Reflection:</div>
+                <p class="journal-reflection-text">
+                  Connected IDEO's methodology with creativity, empathy-first research, and fearless experimentation in business design.
+                </p>
+              </div>
+            </div>
+
+            <div class="journal-photo-diary-col">
+              <div class="photo-diary-header">
+                <span class="hand-note indigo">Visual Diary • Day 2</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="protosem_w1_d2_hero">📷 Upload Photos</button>
+              </div>
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d2_hero">
+                <div class="washi-tape"></div>
+                <div class="featured-photo-img-box">
+                  <img src="assets/images/protosem-w1-d2.svg" alt="Week 1 Day 2 - IDEO Shopping Cart Case Study">
+                </div>
+                <div class="featured-photo-caption">IDEO Case Study & Power BI intelligence session</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- WEEK 1 / DAY 3 -->
+        <article class="journal-entry-card" data-week="week1" data-day="w1-d3" id="entry-w1-d3">
+          <header class="journal-entry-header">
+            <div>
+              <span class="journal-day-badge">WEEK 1 • DAY 3</span>
+              <h3 class="journal-day-title">Going Beneath the Surface</h3>
+            </div>
+            <div class="journal-stamp-top">
+              <span class="journal-stamp forest">FIELD LOG 07</span>
+            </div>
+          </header>
+
+          <div class="journal-entry-body-grid">
+            <div class="journal-narrative-col">
+              <div>
+                <div class="journal-block-heading">WHAT HAPPENED</div>
+                <ul class="journal-happenings-list">
+                  <li>Executed in-depth research on the Indian textile and ethnic-wear industry.</li>
+                  <li>Mapped the complete textile value chain: raw cotton → spinning → weaving → finishing → brand retail.</li>
+                  <li>Researched intermediaries, brand player turnovers, market segments, and supply bottlenecks.</li>
+                  <li>Delivered a structured presentation synthesising our team's research insights.</li>
+                </ul>
+              </div>
+
+              <div class="journal-epiphany-banner" style="background: var(--bg-dark-charcoal); margin-top: 0;">
+                <span class="journal-epiphany-label" style="color: var(--accent-turmeric);">KEY EPIPHANY</span>
+                <div class="journal-epiphany-quote">“A product tells only part of the story. The value chain tells the rest.”</div>
+              </div>
+
+              <div class="journal-reflection-box">
+                <div class="journal-reflection-title">Day Reflection:</div>
+                <p class="journal-reflection-text">
+                  What initially appeared to be a simple clothing topic revealed a massive multi-stakeholder ecosystem where small efficiencies compound across agricultural, industrial, and retail borders.
+                </p>
+              </div>
+            </div>
+
+            <div class="journal-photo-diary-col">
+              <div class="photo-diary-header">
+                <span class="hand-note saffron">Visual Diary • Day 3</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="protosem_w1_d3_hero">📷 Upload Photos</button>
+              </div>
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d3_hero">
+                <div class="washi-tape"></div>
+                <div class="featured-photo-img-box">
+                  <img src="assets/images/protosem-w1-d3.svg" alt="Week 1 Day 3 - Textile Research Presentation">
+                </div>
+                <div class="featured-photo-caption">Sector presentation: Decoding the ethnic wear value chain</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- WEEK 1 / DAY 4 -->
+        <article class="journal-entry-card" data-week="week1" data-day="w1-d4" id="entry-w1-d4">
+          <header class="journal-entry-header">
+            <div>
+              <span class="journal-day-badge">WEEK 1 • DAY 4</span>
+              <h3 class="journal-day-title">Building My Professional Identity</h3>
+            </div>
+            <div class="journal-stamp-top">
+              <span class="journal-stamp indigo">FIELD LOG 08</span>
+            </div>
+          </header>
+
+          <div class="journal-entry-body-grid">
+            <div class="journal-narrative-col">
+              <div>
+                <div class="journal-block-heading">WHAT HAPPENED</div>
+                <ul class="journal-happenings-list">
+                  <li>Architected and built our personal digital portfolio and structured professional resume.</li>
+                  <li>Leveraged <strong>Antigravity</strong> and advanced AI tools to translate experiences into interactive stories.</li>
+                  <li>Structured narrative arcs, visual design tokens, and modular components to reflect our authentic identities.</li>
+                </ul>
+              </div>
+
+              <div class="journal-reflection-box">
+                <div class="journal-reflection-title">Day Reflection:</div>
+                <p class="journal-reflection-text">
+                  Synthesizing classroom learning, leadership initiatives, and internship experiences into a coherent digital identity. Understanding how AI tools empower us to articulate who we are with clarity, precision, and visual excellence.
+                </p>
+              </div>
+            </div>
+
+            <div class="journal-photo-diary-col">
+              <div class="photo-diary-header">
+                <span class="hand-note turmeric">Visual Diary • Day 4</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="protosem_w1_d4_hero">📷 Upload Photos</button>
+              </div>
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d4_hero">
+                <div class="washi-tape"></div>
+                <div class="featured-photo-img-box">
+                  <img src="assets/images/protosem-w1-d4.svg" alt="Week 1 Day 4 - Portfolio and Resume Creation">
+                </div>
+                <div class="featured-photo-caption">Crafting my portfolio & resume using Antigravity AI</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- WEEK 1 / DAY 5 -->
+        <article class="journal-entry-card" data-week="week1" data-day="w1-d5" id="entry-w1-d5">
+          <header class="journal-entry-header">
+            <div>
+              <span class="journal-day-badge">WEEK 1 • DAY 5</span>
+              <h3 class="journal-day-title">From Ambition to Experience</h3>
+            </div>
+            <div class="journal-stamp-top">
+              <span class="journal-stamp">FIELD LOG 09</span>
+            </div>
+          </header>
+
+          <div class="journal-entry-body-grid">
+            <div class="journal-narrative-col">
+              <div>
+                <div class="journal-block-heading">WHAT HAPPENED</div>
+                <ul class="journal-happenings-list">
+                  <li><strong>Goal-Setting Masterclass</strong> — Guided session by Ram on defining personal ambition, intentional career direction, and structured growth benchmarks.</li>
+                  <li><strong>Alumni Dialogue 1: Satheesh (Subam Palamuthir)</strong> — Practical operational lessons from the high-velocity fruits & vegetables retail industry, perishable inventory management, and customer relations.</li>
+                  <li><strong>Alumni Dialogue 2: Textile Industry Leaders</strong> — Two alumni detailed practical industrial operations:
+                    <div style="margin-top: 0.25rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-forest);">
+                      Cotton → Processing/Refining → Yarn → Manufacturing
+                    </div>
+                    Explored circular economy practices, textile waste recycling, and the operational model of <strong>Oye Mill</strong>.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="journal-epiphany-banner" style="background: var(--accent-saffron); margin-top: 0;">
+                <span class="journal-epiphany-label" style="color: #FFFDF5;">ALUMNI SYNTHESIS</span>
+                <div class="journal-epiphany-quote">“The classroom gives us concepts. Experience gives those concepts context.”</div>
+              </div>
+
+              <div class="journal-reflection-box">
+                <div class="journal-reflection-title">Day Reflection:</div>
+                <p class="journal-reflection-text">
+                  Alumni interactions bridged theoretical business textbooks with gritty frontline realities, showing how agile supply chains and sustainability turn into profitable competitive advantages.
+                </p>
+              </div>
+            </div>
+
+            <div class="journal-photo-diary-col">
+              <div class="photo-diary-header">
+                <span class="hand-note forest">Visual Diary • Day 5</span>
+                <button class="photo-upload-trigger-btn" data-photo-target="protosem_w1_d5_hero">📷 Upload Photos</button>
+              </div>
+              <div class="diary-featured-photo-frame" data-lightbox data-slot-id="protosem_w1_d5_hero">
+                <div class="washi-tape"></div>
+                <div class="featured-photo-img-box">
+                  <img src="assets/images/protosem-w1-d5.svg" alt="Week 1 Day 5 - Goal Setting and Alumni Interactions">
+                </div>
+                <div class="featured-photo-caption">Goal setting with Ram & Subam Palamuthir / Textile alumni interactions</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 07: INTERACTIVE SKILLS CONSTELLATION
+         ========================================================================= -->
+    <section class="portfolio-section" id="skills">
+      <div class="container">
+        <div class="section-header-block">
+          <span class="section-number">07 / SKILLS</span>
+          <h2 class="section-heading">Skills & Competencies Network</h2>
+          <p class="section-subheading">An interconnected constellation of business capabilities, analytical mindsets, and modern tools centered around how I think and operate.</p>
+        </div>
+
+        <div class="skills-constellation-wrapper">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <span class="hand-note" style="color: var(--accent-turmeric); font-size: 1.4rem;">
+              Click any node to explore competencies ✦
+            </span>
+          </div>
+
+          <!-- Central ME node + surrounding bubbles -->
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <div class="skills-center-core" id="skills-center-node">
+              <span>ME</span>
+              <span class="skills-center-label">CORE</span>
+            </div>
+          </div>
+
+          <div class="skills-node-cluster">
+            <!-- Core Competencies -->
+            <div class="skill-node-bubble" data-skill-name="RESEARCH">
+              <span class="skill-dot" style="background: #D9532F;"></span> Research
+            </div>
+            <div class="skill-node-bubble" data-skill-name="LEADERSHIP">
+              <span class="skill-dot" style="background: #38BDF8;"></span> Leadership
+            </div>
+            <div class="skill-node-bubble" data-skill-name="COMMUNICATION">
+              <span class="skill-dot" style="background: #4ADE80;"></span> Communication
+            </div>
+            <div class="skill-node-bubble" data-skill-name="TEAMWORK">
+              <span class="skill-dot" style="background: #F472B6;"></span> Teamwork
+            </div>
+            <div class="skill-node-bubble" data-skill-name="PROBLEM SOLVING">
+              <span class="skill-dot" style="background: #FBBF24;"></span> Problem Solving
+            </div>
+            <div class="skill-node-bubble" data-skill-name="CRITICAL THINKING">
+              <span class="skill-dot" style="background: #A78BFA;"></span> Critical Thinking
+            </div>
+            <div class="skill-node-bubble" data-skill-name="CREATIVITY">
+              <span class="skill-dot" style="background: #FB923C;"></span> Creativity
+            </div>
+            <div class="skill-node-bubble" data-skill-name="EVENT MANAGEMENT">
+              <span class="skill-dot" style="background: #34D399;"></span> Event Management
+            </div>
+            <div class="skill-node-bubble" data-skill-name="PRESENTATION">
+              <span class="skill-dot" style="background: #F87171;"></span> Presentation
+            </div>
+            <div class="skill-node-bubble" data-skill-name="BUSINESS ANALYSIS">
+              <span class="skill-dot" style="background: #818CF8;"></span> Business Analysis
+            </div>
+
+            <!-- Tools Cluster -->
+            <div class="skill-node-bubble tool-item" data-skill-name="MICROSOFT EXCEL">
+              <span class="skill-dot"></span> Microsoft Excel
+            </div>
+            <div class="skill-node-bubble tool-item" data-skill-name="POWER BI">
+              <span class="skill-dot"></span> Power BI
+            </div>
+            <div class="skill-node-bubble tool-item" data-skill-name="AI TOOLS">
+              <span class="skill-dot"></span> AI Prompting & Tools
+            </div>
+            <div class="skill-node-bubble tool-item" data-skill-name="ANTIGRAVITY">
+              <span class="skill-dot"></span> Antigravity
+            </div>
+            <div class="skill-node-bubble tool-item" data-skill-name="PRESENTATION/DESIGN TOOLS">
+              <span class="skill-dot"></span> Presentation & Design Tools
+            </div>
+          </div>
+
+          <!-- Dynamic Detail Drawer -->
+          <div id="skill-detail-drawer" style="display: none; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: var(--radius-md); padding: 1.5rem 2rem; max-width: 720px; margin: 2rem auto 0; text-align: left;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <h4 id="skill-active-title" style="font-family: var(--font-serif); font-size: 1.4rem; color: #FAF7F2; margin: 0;"></h4>
+              <span id="skill-active-category" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-turmeric); text-transform: uppercase;"></span>
+            </div>
+            <p id="skill-active-desc" style="color: #E7E5E4; font-size: 0.95rem; line-height: 1.55; margin-bottom: 1rem;"></p>
+            <div id="skill-active-tags" style="display: flex; flex-wrap: wrap; gap: 0.4rem;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 08: RESEARCH & INTERESTS ("THINGS THAT MAKE ME CURIOUS")
+         ========================================================================= -->
+    <section class="portfolio-section" id="curiosities" style="background: var(--bg-card-subtle);">
+      <div class="container">
+        <div class="section-header-block">
+          <span class="section-number">08 / INQUIRIES</span>
+          <h2 class="section-heading">Things That Make Me Curious</h2>
+          <p class="section-subheading">An evolving intellectual space examining the intersection of commerce, law, traditional Indian craftsmanship, and modern consumer behavior.</p>
+        </div>
+
+        <!-- Curiosity Domains Badges -->
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 3.5rem;">
+          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">🏛️ Business Strategy</span>
+          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">⚖️ Law & Corporate Governance</span>
+          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">🔬 Market Research</span>
+          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">🧵 Indian Industries & Heritage</span>
+          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">🤝 Social Issues & Inclusion</span>
+          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">💡 Innovation & Design</span>
+          <span class="interest-pill" style="background: var(--bg-card); font-size: 0.95rem; padding: 0.6rem 1.3rem;">🛍️ Consumer Behaviour & Retail</span>
+        </div>
+
+        <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink-primary); margin: 0;">Questions I'm Exploring</h3>
+          <span class="hand-note saffron">Inquiry cards ✦</span>
+        </div>
+
+        <!-- 5 Interactive Inquiry Cards -->
+        <div class="inquiry-grid">
+          <div class="inquiry-card">
+            <div>
+              <div class="inquiry-card-q-icon">?</div>
+              <div class="inquiry-card-text">
+                “How can traditional Indian industries and artisanal craft clusters remain relevant and economically vibrant for younger generations?”
+              </div>
+            </div>
+            <div class="inquiry-card-meta">
+              <span class="inquiry-card-topic">Traditional Industries</span>
+              <span style="font-size: 0.8rem; color: var(--accent-saffron);">Exploring →</span>
+            </div>
+          </div>
+
+          <div class="inquiry-card">
+            <div>
+              <div class="inquiry-card-q-icon" style="color: var(--accent-indigo);">?</div>
+              <div class="inquiry-card-text">
+                “How can emerging businesses solve urgent social and environmental problems while remaining financially sustainable and scalable?”
+              </div>
+            </div>
+            <div class="inquiry-card-meta">
+              <span class="inquiry-card-topic">Sustainable Business</span>
+              <span style="font-size: 0.8rem; color: var(--accent-indigo);">Exploring →</span>
+            </div>
+          </div>
+
+          <div class="inquiry-card">
+            <div>
+              <div class="inquiry-card-q-icon" style="color: var(--accent-turmeric);">?</div>
+              <div class="inquiry-card-text">
+                “Why do some well-funded commercial ideas fail in the market while unconventional, quirky ideas capture mass consumer loyalty?”
+              </div>
+            </div>
+            <div class="inquiry-card-meta">
+              <span class="inquiry-card-topic">Consumer Behaviour</span>
+              <span style="font-size: 0.8rem; color: var(--accent-turmeric);">Exploring →</span>
+            </div>
+          </div>
+
+          <div class="inquiry-card">
+            <div>
+              <div class="inquiry-card-q-icon" style="color: var(--accent-forest);">?</div>
+              <div class="inquiry-card-text">
+                “How can artificial intelligence and human-centered design enhance everyday community interactions without removing human empathy?”
+              </div>
+            </div>
+            <div class="inquiry-card-meta">
+              <span class="inquiry-card-topic">Technology & Society</span>
+              <span style="font-size: 0.8rem; color: var(--accent-forest);">Exploring →</span>
+            </div>
+          </div>
+
+          <div class="inquiry-card">
+            <div>
+              <div class="inquiry-card-q-icon" style="color: #7E22CE;">?</div>
+              <div class="inquiry-card-text">
+                “How can traditional businesses preserve centuries of cultural integrity while adapting their supply chains to modern digital markets?”
+              </div>
+            </div>
+            <div class="inquiry-card-meta">
+              <span class="inquiry-card-topic">Heritage & Scale</span>
+              <span style="font-size: 0.8rem; color: #7E22CE;">Exploring →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 09: LEADERSHIP & ACTIVITIES OVERVIEW
+         ========================================================================= -->
+    <section class="portfolio-section" id="leadership-overview">
+      <div class="container">
+        <div class="section-header-block">
+          <span class="section-number">09 / ENGAGEMENT</span>
+          <h2 class="section-heading">Leadership & Collaborative Activities</h2>
+          <p class="section-subheading">A consolidated view of active contributions across student governance, community service, and academic challenges.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          <div class="timeline-milestone-card" style="margin: 0;">
+            <span class="journal-stamp">STUDENT GOVERNANCE</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.75rem 0 0.5rem 0;">Student Lead & Sports Day</h3>
+            <p style="font-size: 0.92rem; color: var(--ink-secondary); line-height: 1.55;">
+              Led student committees, organized campus-wide Sports Day events, and steered commerce activities fostering team cohesion and organizational discipline.
+            </p>
+          </div>
+
+          <div class="timeline-milestone-card" style="margin: 0;">
+            <span class="journal-stamp indigo">ETHICS VERTICAL</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.75rem 0 0.5rem 0;">Joint Secretary Role</h3>
+            <p style="font-size: 0.92rem; color: var(--ink-secondary); line-height: 1.55;">
+              Orchestrated Crack the Case, Virtue Verdicts, Ethics Escape Room, Gratitude Day, and CARE 360 community outreach with high student participation.
+            </p>
+          </div>
+
+          <div class="timeline-milestone-card" style="margin: 0;">
+            <span class="journal-stamp forest">PROTOSEM COHORTS</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.75rem 0 0.5rem 0;">Interdisciplinary Teamwork</h3>
+            <p style="font-size: 0.92rem; color: var(--ink-secondary); line-height: 1.55;">
+              Collaborated with diverse peers on rapid engineering challenges, Design Thinking sprints, and deep-dive industry value-chain research.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 10: ACHIEVEMENT (MAHATMA GANDHI SCHOLARSHIP)
+         ========================================================================= -->
+    <section class="portfolio-section" id="achievements" style="background: var(--bg-card-subtle);">
+      <div class="container">
+        <div class="section-header-block">
+          <span class="section-number">10 / MERIT</span>
+          <h2 class="section-heading">Key Achievement</h2>
+          <p class="section-subheading">Honoring academic commitment, integrity, and social responsibility.</p>
+        </div>
+
+        <div class="scholarship-frame">
+          <div style="max-width: 600px;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+              <span class="journal-stamp" style="border-color: var(--accent-turmeric); color: var(--accent-turmeric); background: rgba(217, 155, 38, 0.15);">
+                SCHOLARSHIP RECIPIENT
+              </span>
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--ink-primary); margin-bottom: 0.75rem;">
+              Mahatma Gandhi Scholarship
+            </h3>
+            <p style="font-size: 1.05rem; color: var(--ink-secondary); line-height: 1.65;">
+              Awarded in recognition of academic diligence, ethical leadership, and continuous engagement in social and community development initiatives.
+            </p>
+          </div>
+
+          <div style="text-align: center;">
+            <div class="diary-featured-photo-frame" style="width: 240px; padding: 8px 8px 14px 8px;" data-lightbox data-slot-id="scholarship_cert">
+              <div class="featured-photo-img-box" style="height: 150px;">
+                <img src="assets/images/scholarship-cert.svg" alt="Mahatma Gandhi Scholarship Certificate Preview">
+              </div>
+              <div class="featured-photo-caption" style="font-size: 0.95rem;">Scholarship Certificate</div>
+            </div>
+            <div style="margin-top: 8px;">
+              <button class="photo-upload-trigger-btn" data-photo-target="scholarship_cert">📷 Upload Certificate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 11: RESUME CALLOUT
+         ========================================================================= -->
+    <section class="portfolio-section" id="resume">
+      <div class="container container-narrow">
+        <div class="resume-callout-box">
+          <span class="journal-stamp indigo" style="margin-bottom: 1rem;">CURRICULUM VITAE</span>
+          <h2 style="font-family: var(--font-serif); font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: var(--ink-primary); margin: 0.5rem 0 1rem 0;">
+            Want the concise version?
+          </h2>
+          <p style="font-size: 1.05rem; color: var(--ink-secondary); max-width: 600px; margin: 0 auto 2rem auto; line-height: 1.6;">
+            Review my structured one-page curriculum vitae covering my BBA coursework, leadership appointments, internship, and research achievements.
+          </p>
+
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <button class="btn btn-primary" data-open-resume id="resume-download-btn">
+              <span>View / Download Resume</span>
+              <span class="btn-icon">📄</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 12: WHERE I'M HEADED
+         ========================================================================= -->
+    <section class="portfolio-section" id="where-headed" style="background: var(--bg-card-subtle);">
+      <div class="container">
+        <div class="where-headed-box">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem;">
+            <span class="section-number">12 / FUTURE HORIZON</span>
+            <span class="hand-note saffron">Reflective Ambition ✦</span>
+          </div>
+
+          <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); color: var(--ink-primary); margin-bottom: 1.25rem;">
+            Where I'm Headed
+          </h2>
+
+          <p style="font-size: 1.15rem; color: var(--ink-secondary); line-height: 1.7; max-width: 860px; margin-bottom: 2rem;">
+            I am still actively exploring my trajectory, but I am strongly drawn toward spaces where I can seamlessly combine:
+          </p>
+
+          <div style="background: var(--bg-primary); border: 1.5px solid var(--pencil-line); border-radius: var(--radius-md); padding: 1.75rem 2rem; margin-bottom: 2rem;">
+            <div style="font-family: var(--font-serif); font-size: clamp(1.2rem, 2.5vw, 1.8rem); font-weight: 700; color: var(--accent-saffron); line-height: 1.35; text-align: center;">
+              Business + Law + Research + Leadership + Problem Solving
+            </div>
+          </div>
+
+          <p style="font-size: 1.05rem; color: var(--ink-muted); line-height: 1.65; max-width: 860px;">
+            Whether contributing to industrial supply chain transformations, advising on corporate governance, conducting sector research, or orchestrating purpose-driven initiatives, my goal is to remain grounded in curiosity, question assumptions, and build lasting, practical solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 13: CONTACT ("LET'S CONNECT")
+         ========================================================================= -->
+    <section class="portfolio-section" id="contact">
+      <div class="container">
+        <div class="contact-sheet">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <span class="journal-stamp" style="border-color: var(--accent-turmeric); color: var(--accent-turmeric); background: rgba(217, 155, 38, 0.12);">
+              09 / LET'S CONNECT
+            </span>
+            <span class="hand-note" style="color: var(--accent-turmeric); font-size: 1.35rem;">Live with the question ✦</span>
+          </div>
+
+          <h2 style="font-family: var(--font-serif); font-size: clamp(2.2rem, 5vw, 3.8rem); color: #FAF7F2; margin-bottom: 1.25rem;">
+            Let's Connect
+          </h2>
+
+          <p style="font-family: var(--font-serif); font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-style: italic; color: #E7E5E4; max-width: 780px; line-height: 1.45; margin-bottom: 2rem;">
+            “Have an idea, opportunity, or simply a question worth exploring? I'd love to hear from you.”
+          </p>
+
+          <div class="contact-links-grid">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-channel-card" id="contact-linkedin-link">
+              <div class="contact-channel-icon">in</div>
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #A8A29E; text-transform: uppercase;">Professional Network</div>
+                <div style="font-weight: 700; font-size: 1.05rem;">LinkedIn Profile</div>
+                <div style="font-size: 0.8rem; color: var(--accent-turmeric);">[LINKEDIN URL]</div>
+              </div>
+            </a>
+
+            <a href="mailto:udayaritthi@example.com" class="contact-channel-card" id="contact-email-link" onclick="copyTextToClipboard('udayaritthi@example.com', 'Email'); return false;">
+              <div class="contact-channel-icon">✉</div>
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #A8A29E; text-transform: uppercase;">Direct Email</div>
+                <div style="font-weight: 700; font-size: 1.05rem;">Send an Email</div>
+                <div style="font-size: 0.8rem; color: var(--accent-turmeric);">[EMAIL]</div>
+              </div>
+            </a>
+
+            <a href="#resume" class="contact-channel-card" data-open-resume id="contact-resume-link">
+              <div class="contact-channel-icon">📄</div>
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #A8A29E; text-transform: uppercase;">Curriculum Vitae</div>
+                <div style="font-weight: 700; font-size: 1.05rem;">Resume Document</div>
+                <div style="font-size: 0.8rem; color: var(--accent-turmeric);">[RESUME LINK]</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Editorial Footer -->
+  <footer class="editorial-footer">
+    <div class="container">
+      <p style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--ink-primary); margin-bottom: 0.5rem;">
+        “Live with the Question.”
+      </p>
+      <p style="margin: 0; font-size: 0.85rem;">
+        Designed & Built by <span class="dynamic-user-name">Udayaritthi</span> using Antigravity AI • BBA Visual Journal & Professional Portfolio
+      </p>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS & LIGHTBOXES
+       ========================================================================= -->
+
+  <!-- 1. Global Image Lightbox -->
+  <div class="lightbox-overlay" id="global-lightbox">
+    <button class="modal-close-btn" id="lightbox-close-btn" style="background: rgba(255,255,255,0.15); color: #fff; top: 2rem; right: 2rem;">✕</button>
+    <div class="lightbox-img-wrap">
+      <img src="" alt="Expanded View" id="lightbox-target-img">
+    </div>
+    <div class="lightbox-caption" id="lightbox-target-caption"></div>
+  </div>
+
+  <!-- 2. Local Photo Uploader / Replacer Modal -->
+  <div class="custom-modal-overlay" id="photo-uploader-modal">
+    <div class="custom-modal-dialog">
+      <button class="modal-close-btn" data-modal-close>✕</button>
+      <span class="journal-stamp saffron" style="margin-bottom: 0.75rem;">IN-BROWSER PHOTO MANAGER</span>
+      <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink-primary); margin: 0.25rem 0 1rem 0;" id="photo-modal-slot-title">
+        Upload / Replace Photo
+      </h3>
+      <p style="font-size: 0.92rem; color: var(--ink-muted); margin-bottom: 1.5rem;">
+        Select an image from your computer or paste an image URL. It will instantly replace the placeholder on your portfolio and save automatically in your browser's local storage!
+      </p>
+
+      <div style="background: var(--bg-secondary); border: 2px dashed var(--pencil-line-dark); border-radius: var(--radius-md); padding: 1.5rem; text-align: center; margin-bottom: 1.5rem;">
+        <input type="file" id="local-photo-file-input" accept="image/*" style="display: none;">
+        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('local-photo-file-input').click();">
+          📁 Choose Image from Computer
+        </button>
+        <div style="margin: 0.75rem 0; font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-muted);">— OR PASTE IMAGE URL —</div>
+        <input type="text" id="local-photo-url-input" placeholder="https://example.com/photo.jpg" style="width: 100%; max-width: 400px; padding: 8px 12px; border-radius: var(--radius-xs); border: 1px solid var(--pencil-line); font-size: 0.85rem;">
+      </div>
+
+      <!-- Preview -->
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-muted); display: block; margin-bottom: 0.5rem;">LIVE PREVIEW</span>
+        <img id="photo-modal-preview-img" src="" alt="Preview" style="max-width: 260px; max-height: 180px; border-radius: var(--radius-sm); border: 1px solid var(--pencil-line); object-fit: cover;">
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <button class="btn btn-secondary btn-sm" id="reset-local-photo-btn" style="color: var(--accent-saffron); border-color: var(--accent-saffron);">
+          Reset to Default
+        </button>
+        <button class="btn btn-primary btn-sm" id="save-local-photo-btn">
+          Save Photo to Journal ✓
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Resume Viewer Modal -->
+  <div class="custom-modal-overlay" id="resume-preview-modal">
+    <div class="custom-modal-dialog" style="max-width: 840px;">
+      <button class="modal-close-btn" data-modal-close>✕</button>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid var(--pencil-line); padding-bottom: 0.75rem;">
+        <div>
+          <span class="journal-stamp indigo">CURRICULUM VITAE</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin: 0.25rem 0 0 0;" class="dynamic-user-name">Udayaritthi</h3>
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="window.print();">
+          🖨️ Print / Save PDF
+        </button>
+      </div>
+
+      <!-- Clean Resume Document Body -->
+      <div style="background: #FFFDF8; border: 1px solid var(--pencil-line); border-radius: var(--radius-md); padding: 2rem; font-family: var(--font-sans); color: var(--ink-primary); line-height: 1.5;">
+        <div style="border-bottom: 2px solid var(--ink-primary); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+          <h2 style="font-family: var(--font-serif); font-size: 1.75rem; margin: 0;" class="dynamic-user-name">Udayaritthi</h2>
+          <div style="font-size: 0.95rem; color: var(--accent-saffron); font-weight: 600; margin-top: 2px;">BBA Undergraduate • Strategic Inquiry • Leadership</div>
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-muted); margin-top: 6px;">
+            Philosophy: "Live with the Question" • Email: [EMAIL] • LinkedIn: [LINKEDIN URL]
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.25rem;">
+          <h4 style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-saffron); margin-bottom: 0.35rem;">EDUCATION</h4>
+          <div style="display: flex; justify-content: space-between; font-weight: 700;">
+            <span>Bachelor of Business Administration (BBA)</span>
+            <span style="font-family: var(--font-mono); font-size: 0.85rem;">Ongoing</span>
+          </div>
+          <div style="font-size: 0.85rem; color: var(--ink-muted);">Key Domains: Management, Accounting, Economics, Marketing, Business Law, Quantitative Techniques, Operations, Research.</div>
+        </div>
+
+        <div style="margin-bottom: 1.25rem;">
+          <h4 style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-indigo); margin-bottom: 0.35rem;">EXPERIENCE & INTERNSHIP</h4>
+          <div style="font-weight: 700;">Arvind Chettinad Snacks — Operations & Supply Chain Exposure</div>
+          <ul style="margin: 0.35rem 0 0 0; padding-left: 1.2rem; font-size: 0.88rem; color: var(--ink-secondary);">
+            <li>Production: Commercial batch processing, high-capacity frying machinery, and continuous workflow pacing.</li>
+            <li>Materials: Sourcing, FIFO inventory controls, shrinkage minimization, and material handling.</li>
+            <li>Operations: Quality checks, packaging, fleet transport coordination, safety standards, and retail delivery.</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom: 1.25rem;">
+          <h4 style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-forest); margin-bottom: 0.35rem;">LEADERSHIP & POSITIONS</h4>
+          <div style="font-weight: 700;">Joint Secretary — Ethics & Values Vertical</div>
+          <ul style="margin: 0.35rem 0 0 0; padding-left: 1.2rem; font-size: 0.88rem; color: var(--ink-secondary);">
+            <li>Led end-to-end planning, coordination, and execution of campus initiatives: Crack the Case, Virtue Verdicts, Ethics Escape Room, Gratitude Day, and CARE 360 community outreach.</li>
+          </ul>
+          <div style="font-weight: 700; margin-top: 0.5rem;">Student Leadership & School Sports Coordination</div>
+          <div style="font-size: 0.85rem; color: var(--ink-muted); padding-left: 1.2rem;">Served as Student Lead organizing Sports Day and commerce activities.</div>
+        </div>
+
+        <div style="margin-bottom: 1.25rem;">
+          <h4 style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-crimson); margin-bottom: 0.35rem;">RESEARCH PROJECT</h4>
+          <div style="font-weight: 700;">Indian Traditional Wear & Textile Value Chain Ecosystem</div>
+          <div style="font-size: 0.88rem; color: var(--ink-secondary);">Detailed 8-stage value chain mapping from raw cotton to brand retail, analyzing intermediaries, brand players, turnover dynamics, and modern retail scaling.</div>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-turmeric); margin-bottom: 0.35rem;">SCHOLARSHIPS & SKILLS</h4>
+          <div style="font-size: 0.88rem; color: var(--ink-secondary);">
+            <strong>Award:</strong> Mahatma Gandhi Scholarship recipient.<br>
+            <strong>Core Skills:</strong> Research, Leadership, Communication, Problem Solving, Critical Thinking, Event Management, Business Analysis.<br>
+            <strong>Tools:</strong> Microsoft Excel, Power BI, AI Prompt Engineering, Antigravity.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/question-path.js"></script>
+  <script src="js/value-chains.js"></script>
+  <script src="js/skills-network.js"></script>
+  <script src="js/journal-manager.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
