@@ -1,0 +1,269 @@
+/* ==========================================================================
+   PERSONAL COLOUR EXPRESSION — “POPS OF ME”
+   Mostly refined, neutral & editorial. Occasionally unexpected & vibrant.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ORGANIC SINGLE-WORD HIGHLIGHTS & TYPOGRAPHIC POPS
+   -------------------------------------------------------------------------- */
+.pop-word {
+  font-weight: 800;
+  display: inline-block;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+
+.pop-word.pop-saffron {
+  color: #D9532F;
+}
+
+.pop-word.pop-teal {
+  color: #0E9F92;
+}
+
+.pop-word.pop-marigold {
+  color: #D98200;
+}
+
+.pop-word.pop-violet {
+  color: #7E22CE;
+}
+
+.pop-word.pop-coral {
+  color: #EA580C;
+}
+
+/* Organic Highlighter Marker Strokes */
+.pop-hl-mustard {
+  background: linear-gradient(104deg, rgba(234, 179, 8, 0) 0.9%, rgba(234, 179, 8, 0.45) 2.4%, rgba(234, 179, 8, 0.35) 94%, rgba(234, 179, 8, 0.05) 98%);
+  border-radius: 2px;
+  padding: 0 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.pop-hl-teal {
+  background: linear-gradient(104deg, rgba(20, 184, 166, 0) 0.9%, rgba(20, 184, 166, 0.35) 2.4%, rgba(20, 184, 166, 0.28) 94%, rgba(20, 184, 166, 0.05) 98%);
+  border-radius: 2px;
+  padding: 0 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.pop-hl-saffron {
+  background: linear-gradient(104deg, rgba(217, 83, 47, 0) 0.9%, rgba(217, 83, 47, 0.35) 2.4%, rgba(217, 83, 47, 0.28) 94%, rgba(217, 83, 47, 0.05) 98%);
+  border-radius: 2px;
+  padding: 0 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.pop-hl-violet {
+  background: linear-gradient(104deg, rgba(168, 85, 247, 0) 0.9%, rgba(168, 85, 247, 0.3) 2.4%, rgba(168, 85, 247, 0.22) 94%, rgba(168, 85, 247, 0.05) 98%);
+  border-radius: 2px;
+  padding: 0 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Vibrant Hand-drawn Underlines */
+.pop-underline-saffron {
+  text-decoration: underline;
+  text-decoration-color: #D9532F;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+.pop-underline-teal {
+  text-decoration: underline;
+  text-decoration-color: #0E9F92;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+.pop-underline-marigold {
+  text-decoration: underline;
+  text-decoration-color: #D98200;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   2. PHOTO CORNER ACCENTS & GEOMETRIC POPS
+   -------------------------------------------------------------------------- */
+.pop-photo-offset-teal {
+  position: relative;
+}
+.pop-photo-offset-teal::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 40px;
+  height: 40px;
+  background: #0E9F92;
+  border-radius: var(--radius-sm);
+  z-index: -1;
+  opacity: 0.85;
+}
+
+.pop-photo-offset-saffron {
+  position: relative;
+}
+.pop-photo-offset-saffron::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: -8px;
+  width: 45px;
+  height: 45px;
+  background: #D9532F;
+  border-radius: var(--radius-sm);
+  z-index: -1;
+  opacity: 0.85;
+}
+
+.pop-photo-offset-marigold {
+  position: relative;
+}
+.pop-photo-offset-marigold::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 35px;
+  height: 35px;
+  background: #D98200;
+  border-radius: var(--radius-sm);
+  z-index: -1;
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   3. PROTOSEM DAY-SPECIFIC PERSONALITY ACCENTS
+   -------------------------------------------------------------------------- */
+/* W0 Day 1: Turquoise */
+#entry-w0-d1 .journal-day-badge {
+  color: #0E9F92;
+  background: rgba(14, 159, 146, 0.12);
+  border: 1px solid rgba(14, 159, 146, 0.3);
+}
+#entry-w0-d1 .journal-reflection-box {
+  border-left-color: #0E9F92;
+}
+
+/* W0 Day 2: Terracotta Vermilion */
+#entry-w0-d2 .journal-day-badge {
+  color: #D9532F;
+  background: rgba(217, 83, 47, 0.12);
+  border: 1px solid rgba(217, 83, 47, 0.3);
+}
+#entry-w0-d2 .journal-reflection-box {
+  border-left-color: #D9532F;
+}
+
+/* W0 Day 3: Marigold Mustard */
+#entry-w0-d3 .journal-day-badge {
+  color: #D98200;
+  background: rgba(217, 130, 0, 0.12);
+  border: 1px solid rgba(217, 130, 0, 0.3);
+}
+#entry-w0-d3 .journal-reflection-box {
+  border-left-color: #D98200;
+}
+
+/* W0 Day 4: Electric Violet */
+#entry-w0-d4 .journal-day-badge {
+  color: #7E22CE;
+  background: rgba(126, 34, 206, 0.12);
+  border: 1px solid rgba(126, 34, 206, 0.3);
+}
+#entry-w0-d4 .journal-reflection-box {
+  border-left-color: #7E22CE;
+}
+
+/* W1 Day 1: Coral / Madder Red */
+#entry-w1-d1 .journal-day-badge {
+  color: #EA580C;
+  background: rgba(234, 88, 12, 0.12);
+  border: 1px solid rgba(234, 88, 12, 0.3);
+}
+#entry-w1-d1 .journal-reflection-box {
+  border-left-color: #EA580C;
+}
+
+/* W1 Day 2: Cobalt Sky */
+#entry-w1-d2 .journal-day-badge {
+  color: #0284C7;
+  background: rgba(2, 132, 199, 0.12);
+  border: 1px solid rgba(2, 132, 199, 0.3);
+}
+#entry-w1-d2 .journal-reflection-box {
+  border-left-color: #0284C7;
+}
+
+/* W1 Day 3: Terracotta Saffron */
+#entry-w1-d3 .journal-day-badge {
+  color: #D9532F;
+  background: rgba(217, 83, 47, 0.12);
+  border: 1px solid rgba(217, 83, 47, 0.3);
+}
+#entry-w1-d3 .journal-reflection-box {
+  border-left-color: #D9532F;
+}
+
+/* W1 Day 4: Deep Iris Violet */
+#entry-w1-d4 .journal-day-badge {
+  color: #7E22CE;
+  background: rgba(126, 34, 206, 0.12);
+  border: 1px solid rgba(126, 34, 206, 0.3);
+}
+#entry-w1-d4 .journal-reflection-box {
+  border-left-color: #7E22CE;
+}
+
+/* W1 Day 5: Turmeric Ochre */
+#entry-w1-d5 .journal-day-badge {
+  color: #D98200;
+  background: rgba(217, 130, 0, 0.12);
+  border: 1px solid rgba(217, 130, 0, 0.3);
+}
+#entry-w1-d5 .journal-reflection-box {
+  border-left-color: #D98200;
+}
+
+/* --------------------------------------------------------------------------
+   4. VIBRANT MICRO STICKERS & PERSONAL MARKS
+   -------------------------------------------------------------------------- */
+.pop-sticker-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 2px 7px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.pop-sticker-tag.saffron {
+  background: #D9532F;
+  color: #FFFFFF;
+}
+
+.pop-sticker-tag.teal {
+  background: #0E9F92;
+  color: #FFFFFF;
+}
+
+.pop-sticker-tag.marigold {
+  background: #D98200;
+  color: #FFFFFF;
+}
+
+.pop-sticker-tag.violet {
+  background: #7E22CE;
+  color: #FFFFFF;
+}
