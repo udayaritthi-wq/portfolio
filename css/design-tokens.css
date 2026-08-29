@@ -1,0 +1,114 @@
+/* ==========================================================================
+   DESIGN TOKENS & SYSTEM VARIABLES
+   Aesthetic: Modern Editorial x Creative Journal x Indian Textile Accents
+   ========================================================================== */
+
+:root {
+  /* Surface & Background Tones (Warm Parchment & Cream) */
+  --bg-primary: #FAF7F2;
+  --bg-secondary: #F3ECE1;
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: #FDFBF7;
+  --bg-journal-sheet: #FCFAF6;
+  --bg-accent-soft: #F6EFE6;
+  --bg-dark-charcoal: #181615;
+  --bg-dark-surface: #22201D;
+  
+  /* Ink & Typography Colors */
+  --ink-primary: #1C1917;       /* Deep Charcoal */
+  --ink-secondary: #44403C;     /* Warm Charcoal */
+  --ink-muted: #78716C;         /* Muted Slate / Pencil Lead */
+  --ink-faint: #A8A29E;         /* Light Pencil / Margin line */
+  --ink-inverted: #FAF7F2;      /* Off-white text on dark */
+  --ink-inverted-muted: #D6D3D1;
+
+  /* Vibrant Accents - Subtly Inspired by Indian Textiles */
+  --accent-saffron: #D9532F;     /* Terracotta / Saffron Vermilion */
+  --accent-saffron-light: #FCEBE6;
+  --accent-saffron-hover: #BF4120;
+  
+  --accent-indigo: #1F4E5B;      /* Deep Peacock / Indigo Slate */
+  --accent-indigo-light: #E7EFF2;
+  --accent-indigo-hover: #163C47;
+  
+  --accent-turmeric: #D99B26;    /* Warm Turmeric / Marigold Ochre */
+  --accent-turmeric-light: #FEF6E7;
+  
+  --accent-forest: #2A5C4A;      /* Emerald Moss / Forest */
+  --accent-forest-light: #EAF4F0;
+
+  --accent-crimson: #9B2226;     /* Deep Madder Crimson */
+
+  /* Journal Annotation Tones (Handwritten ink & highlighter) */
+  --highlighter-yellow: rgba(254, 240, 138, 0.55);
+  --highlighter-orange: rgba(254, 215, 170, 0.55);
+  --highlighter-cyan: rgba(186, 230, 253, 0.45);
+  --pencil-line: #E7DFD5;
+  --pencil-line-dark: #D4C9BC;
+  --margin-red: rgba(217, 83, 47, 0.4);
+
+  /* Typography Stacks */
+  --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-display: 'Syne', 'Fraunces', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-hand: 'Caveat', 'Kalam', cursive;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Typography Scale */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-md: 1.125rem;   /* 18px */
+  --text-lg: 1.25rem;    /* 20px */
+  --text-xl: 1.5rem;     /* 24px */
+  --text-2xl: 1.875rem;  /* 30px */
+  --text-3xl: 2.25rem;   /* 36px */
+  --text-4xl: 3rem;      /* 48px */
+  --text-5xl: 3.75rem;   /* 60px */
+  --text-6xl: 4.5rem;    /* 72px */
+  --text-hero: clamp(2.75rem, 6vw + 1rem, 5.5rem);
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+  --space-section: clamp(4rem, 8vw, 8rem);
+
+  /* Layout */
+  --container-max: 1280px;
+  --container-wide: 1440px;
+  --container-narrow: 900px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Shadows (Soft, editorial print style) */
+  --shadow-sm: 0 2px 6px rgba(28, 25, 23, 0.04);
+  --shadow-md: 0 8px 20px rgba(28, 25, 23, 0.06), 0 2px 6px rgba(28, 25, 23, 0.03);
+  --shadow-lg: 0 16px 36px rgba(28, 25, 23, 0.08), 0 4px 12px rgba(28, 25, 23, 0.04);
+  --shadow-xl: 0 24px 50px rgba(28, 25, 23, 0.12);
+  --shadow-polaroid: 0 12px 28px rgba(28, 25, 23, 0.09), 0 2px 6px rgba(28, 25, 23, 0.05);
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Z-Indices */
+  --z-negative: -1;
+  --z-base: 1;
+  --z-elevated: 10;
+  --z-sticky: 100;
+  --z-nav: 500;
+  --z-modal: 1000;
+  --z-toast: 1100;
+}
