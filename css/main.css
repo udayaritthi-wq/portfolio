@@ -1,0 +1,422 @@
+/* ==========================================================================
+   MAIN LAYOUT & GLOBAL STYLES
+   Sections, Grid Layouts, Responsive Breakpoints, Animations
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 2.5rem);
+  padding-right: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.container-narrow {
+  max-width: var(--container-narrow);
+}
+
+.container-wide {
+  max-width: var(--container-wide);
+}
+
+/* Section Wrapper Standard */
+.portfolio-section {
+  padding: var(--space-section) 0;
+  position: relative;
+}
+
+.section-header-block {
+  margin-bottom: clamp(2rem, 5vw, 3.75rem);
+}
+
+/* --------------------------------------------------------------------------
+   HERO SECTION LAYOUT
+   -------------------------------------------------------------------------- */
+.hero-section {
+  min-height: 94vh;
+  display: flex;
+  align-items: center;
+  padding-top: 6.5rem;
+  padding-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 80% 20%, rgba(217, 83, 47, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 10% 80%, rgba(31, 78, 91, 0.05) 0%, transparent 40%),
+              var(--bg-primary);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.hero-editorial-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-portrait-card {
+  position: relative;
+  padding: 16px 16px 28px 16px;
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--pencil-line);
+  transform: rotate(1.5deg);
+  transition: transform var(--transition-bounce), box-shadow var(--transition-fast);
+}
+
+.hero-portrait-card:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 0 28px 60px rgba(28, 25, 23, 0.16);
+}
+
+.hero-portrait-img-box {
+  width: 100%;
+  height: clamp(340px, 45vh, 460px);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, #E2D7C8 100%);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-portrait-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.hero-portrait-card:hover img {
+  transform: scale(1.04);
+}
+
+.hero-portrait-caption {
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+  color: var(--ink-secondary);
+  text-align: center;
+  margin-top: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   ABOUT ME SECTION
+   -------------------------------------------------------------------------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.about-interests-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.interest-pill {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--pencil-line);
+  color: var(--ink-primary);
+  transition: all var(--transition-bounce);
+}
+
+.interest-pill:hover {
+  background: var(--accent-saffron);
+  border-color: var(--accent-saffron);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.philosophy-banner-box {
+  background: var(--bg-dark-charcoal);
+  color: var(--ink-inverted);
+  border-radius: var(--radius-xl);
+  padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.75rem, 4vw, 3.5rem);
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+/* --------------------------------------------------------------------------
+   TIMELINE (JOURNEY) SECTION
+   -------------------------------------------------------------------------- */
+.timeline-track-wrapper {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.timeline-vertical-line {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 12px;
+  width: 2.5px;
+  background: repeating-linear-gradient(180deg, var(--accent-saffron), var(--accent-saffron) 8px, transparent 8px, transparent 16px);
+}
+
+.timeline-milestone-card {
+  background: var(--bg-card);
+  border: 1px solid var(--pencil-line);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.timeline-milestone-card:hover {
+  transform: translateX(6px);
+  border-color: var(--accent-saffron);
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-node-marker {
+  position: absolute;
+  left: -2.5rem;
+  top: 2rem;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background: var(--bg-primary);
+  border: 3px solid var(--accent-saffron);
+  box-shadow: 0 0 0 4px rgba(217, 83, 47, 0.15);
+  z-index: 5;
+}
+
+/* --------------------------------------------------------------------------
+   ETHICS & VALUES VERTICAL GALLERY (SECTION 08)
+   -------------------------------------------------------------------------- */
+.ethics-events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.ethics-event-card {
+  background: var(--bg-card);
+  border: 1px solid var(--pencil-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-bounce);
+  display: flex;
+  flex-direction: column;
+}
+
+.ethics-event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-indigo);
+}
+
+.ethics-card-media {
+  width: 100%;
+  height: 210px;
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.ethics-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.ethics-event-card:hover .ethics-card-media img {
+  transform: scale(1.05);
+}
+
+.ethics-card-content {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   TEXTILE RESEARCH PROJECT (SECTION 09)
+   -------------------------------------------------------------------------- */
+.textile-project-sheet {
+  background: var(--bg-card);
+  border: 1px solid var(--pencil-line);
+  border-radius: var(--radius-xl);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+/* Subtle textile weave pattern border */
+.textile-pattern-strip {
+  height: 8px;
+  width: 100%;
+  background: repeating-linear-gradient(45deg, var(--accent-saffron), var(--accent-saffron) 10px, var(--accent-indigo) 10px, var(--accent-indigo) 20px, var(--accent-turmeric) 20px, var(--accent-turmeric) 30px);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SCHOLARSHIP & ACHIEVEMENT (SECTION 15)
+   -------------------------------------------------------------------------- */
+.scholarship-frame {
+  background: var(--bg-card);
+  border: 2px solid var(--accent-turmeric);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 3rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   RESUME CALLOUT & WHERE I'M HEADED
+   -------------------------------------------------------------------------- */
+.resume-callout-box {
+  background: linear-gradient(135deg, var(--bg-card-subtle) 0%, var(--bg-secondary) 100%);
+  border: 1.5px dashed var(--pencil-line-dark);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+
+.where-headed-box {
+  background: var(--bg-card);
+  border: 1px solid var(--pencil-line);
+  border-radius: var(--radius-xl);
+  padding: clamp(2.5rem, 5vw, 4rem);
+  box-shadow: var(--shadow-md);
+}
+
+/* --------------------------------------------------------------------------
+   CONTACT SECTION & FOOTER
+   -------------------------------------------------------------------------- */
+.contact-sheet {
+  background: var(--bg-dark-charcoal);
+  color: var(--ink-inverted);
+  border-radius: var(--radius-xl);
+  padding: clamp(2.5rem, 6vw, 4.5rem);
+  box-shadow: var(--shadow-xl);
+}
+
+.contact-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.contact-channel-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-decoration: none;
+  color: var(--ink-inverted);
+  transition: all var(--transition-bounce);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-channel-card:hover {
+  background: rgba(217, 83, 47, 0.25);
+  border-color: var(--accent-saffron);
+  transform: translateY(-3px);
+}
+
+.contact-channel-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--accent-turmeric);
+}
+
+.editorial-footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--pencil-line);
+  background: var(--bg-primary);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .nav-chapters {
+    display: none; /* Collapsed into mobile menu */
+  }
+  .mobile-nav-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-portrait-card {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .philosophy-arc-steps {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .arc-connector {
+    width: 2px;
+    height: 30px;
+    margin-left: 24px;
+    flex: none;
+  }
+}
