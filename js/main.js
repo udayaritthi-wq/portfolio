@@ -3,31 +3,46 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Question Path Graphic
+  // 1. Initialize Custom Fluid Cursor
+  if (typeof window.CustomCursor === 'function') {
+    new window.CustomCursor();
+  }
+
+  // 2. Initialize Question Path Graphic
   if (document.getElementById('question-path-canvas')) {
     new window.QuestionPathGraphic('question-path-canvas');
   }
 
-  // 2. Initialize Interactive Value Chains
+  // 3. Initialize Flowing Textile Thread Canvas
+  if (document.getElementById('textile-thread-canvas')) {
+    new window.TextileThread('textile-thread-canvas');
+  }
+
+  // 4. Initialize Interactive Value Chains
   if (typeof window.initValueChains === 'function') {
     window.initValueChains();
   }
 
-  // 3. Initialize Skills Constellation
+  // 5. Initialize Skills Constellation
   if (typeof window.initSkillsConstellation === 'function') {
     window.initSkillsConstellation();
   }
 
-  // 4. Initialize Protosem Journal Manager
+  // 6. Initialize Protosem Journal Manager
   if (typeof window.JournalManager === 'function') {
     window.journalInstance = new window.JournalManager();
   }
 
-  // 5. Initialize General Interactions (Lightbox, Modals, Progress)
+  // 7. Initialize General Interactions (Lightbox, Modals, Progress)
   if (typeof window.initInteractions === 'function') {
     window.initInteractions();
   }
 
+  // 8. Initialize Elevated Graphics & Easter Eggs
+  if (typeof window.initElevatedInteractions === 'function') {
+    window.initElevatedInteractions();
+  }
+
   // Log confirmation
-  console.log("✦ 'Live with the Question' Portfolio Initialized successfully.");
+  console.log("✦ 'Live with the Question' Elevated Portfolio Initialized.");
 });
