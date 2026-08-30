@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="css/protosem.css">
   <link rel="stylesheet" href="css/elevated-graphics.css">
   <link rel="stylesheet" href="css/pops-of-me.css">
+  <link rel="stylesheet" href="css/interactive-experience.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -159,7 +160,7 @@
                 <img src="assets/images/hero-portrait.svg" alt="Udayaritthi - BBA Student & Explorer" id="hero-portrait-img">
               </div>
               <div class="hero-portrait-caption">
-                DAY 01 / PROTOSEM — “Questioning the ordinary, uncovering the insights.”
+                “Questioning the ordinary, uncovering the insights.”
               </div>
               <div style="margin-top: 10px; text-align: center;">
                 <button class="photo-upload-trigger-btn" data-photo-target="hero_portrait">
@@ -191,6 +192,28 @@
       <div class="ghost-watermark-text ghost-bottom-left">EXPLORE</div>
 
       <div class="container" style="position: relative; z-index: 2;">
+        <!-- INTERACTIVE LAYER: “LIVE WITH THE QUESTION” DISCOVERY CHALLENGE -->
+        <div class="quest-intro-banner">
+          <div class="quest-intro-grid">
+            <div>
+              <div class="quest-intro-title">
+                <span style="color: var(--accent-saffron);">✦</span> “Something is hidden here.”
+              </div>
+              <p class="quest-intro-subtitle">“If you're curious enough, you'll find it.”</p>
+            </div>
+            <div class="quest-intro-actions">
+              <div class="quest-intro-tracker-badge">
+                <span>QUESTIONS FOUND:</span>
+                <span class="quest-tracker-counter tracker-pop">0 / 7</span>
+              </div>
+              <a href="#about" class="btn-quest-start" id="quest-start-btn" data-cursor="arrow">
+                <span>START EXPLORING</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div class="section-header-block">
           <span class="section-number">01 / ABOUT</span>
           <h2 class="section-heading">A Little About Me</h2>
@@ -252,8 +275,16 @@
               “What if?”
             </span>
 
-            <div class="marginalia" style="margin-bottom: 1.5rem; background: #FFFDF5;">
-              <span class="hand-note saffron">Margin Note:</span>
+            <div class="marginalia" style="margin-bottom: 1.5rem; background: #FFFDF5; position: relative;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="hand-note saffron">Margin Note:</span>
+                <span class="hidden-question-mark qmark-handdrawn" data-question-id="q_about" title="Explore this question" data-cursor="question">
+                  <span class="q-glyph-wrap">
+                    <span class="q-glyph">?</span>
+                    <span class="q-arrow">→</span>
+                  </span>
+                </span>
+              </div>
               <p style="font-family: var(--font-hand); font-size: 1.25rem; color: var(--ink-secondary); margin: 0.5rem 0 0 0; line-height: 1.35;">
                 “Classrooms provide concepts. Real businesses, communities, and field experiences provide the <span class="pop-word pop-teal">context</span>.”
               </p>
@@ -404,7 +435,15 @@
           <div class="timeline-milestone-card">
             <div class="timeline-node-marker"></div>
             <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
-              <span class="journal-stamp indigo">UNDERGRADUATE STUDIES</span>
+              <div style="display: flex; align-items: center;">
+                <span class="journal-stamp indigo">UNDERGRADUATE STUDIES</span>
+                <span class="hidden-question-mark qmark-timeline" data-question-id="q_journey" title="Explore this question" data-cursor="question">
+                  <span class="q-glyph-wrap">
+                    <span class="q-glyph">?</span>
+                    <span class="q-arrow">→</span>
+                  </span>
+                </span>
+              </div>
               <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-muted);">BACHELOR OF BUSINESS ADMINISTRATION</span>
             </div>
             <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink-primary); margin-bottom: 0.5rem;">
@@ -488,8 +527,14 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
           <div class="inquiry-card" data-cursor="explore">
             <div>
-              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
                 <span class="journal-stamp">PRODUCTION</span>
+                <span class="hidden-question-mark qmark-batch" data-question-id="q_experience" title="Explore this question" data-cursor="question">
+                  <span class="q-glyph-wrap">
+                    <span class="q-glyph">BATCH ?</span>
+                    <span class="q-arrow">→</span>
+                  </span>
+                </span>
               </div>
               <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--ink-primary); margin-bottom: 0.75rem;">Batch Processing & Flow</h3>
               <ul class="journal-happenings-list">
@@ -861,7 +906,15 @@
 
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; margin-top: 0.75rem;">
             <div>
-              <span class="journal-stamp indigo">ACADEMIC RESEARCH PROJECT</span>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="journal-stamp indigo">ACADEMIC RESEARCH PROJECT</span>
+                <span class="hidden-question-mark qmark-textile" data-question-id="q_projects" title="Explore this question" data-cursor="question">
+                  <span class="q-glyph-wrap">
+                    <span class="q-glyph">?</span>
+                    <span class="q-arrow">→</span>
+                  </span>
+                </span>
+              </div>
               <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin: 0.5rem 0 0.25rem 0;">Textile Value Chain & Ethnic Wear Ecosystem</h3>
             </div>
             <span class="hand-note turmeric margin-annotation margin-note-turmeric" data-thought="Connecting craft traditions to modern retail scaling." style="position: static; font-size: 1.3rem;">
@@ -1224,7 +1277,15 @@
                 <div class="featured-photo-img-box">
                   <img src="assets/images/protosem-w0-d3.svg" alt="Week 0 Day 3 - Building the Spaghetti Tower Challenge">
                 </div>
-                <div class="featured-photo-caption">DAY 03 / PROTOSEM — “The solution looked simple. The process wasn't.”</div>
+                <div class="featured-photo-caption">
+                  DAY 03 / PROTOSEM — “The solution looked simple. The process wasn't.”
+                  <span class="hidden-question-mark qmark-polaroid" data-question-id="q_protosem" title="Explore this question" data-cursor="question">
+                    <span class="q-glyph-wrap">
+                      <span class="q-glyph">?</span>
+                      <span class="q-arrow">→</span>
+                    </span>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -1556,9 +1617,15 @@
         </div>
 
         <div class="skills-constellation-wrapper">
-          <div style="text-align: center; margin-bottom: 2rem;">
+          <div style="text-align: center; margin-bottom: 2rem; display: flex; justify-content: center; align-items: center; gap: 0.75rem;">
             <span class="hand-note" style="color: var(--accent-turmeric); font-size: 1.4rem;">
               Click any node to explore competencies ✦
+            </span>
+            <span class="hidden-question-mark qmark-constellation" data-question-id="q_skills" title="Explore this question" data-cursor="question">
+              <span class="q-glyph-wrap">
+                <span class="q-glyph">? NODE</span>
+                <span class="q-arrow">→</span>
+              </span>
             </span>
           </div>
 
@@ -1906,6 +1973,180 @@
     </section>
 
     <!-- =========================================================================
+         UNLOCKED CHAPTER: BEYOND THE RESUME ("Things You Wouldn't Find on My Resume")
+         ========================================================================= -->
+    <section class="beyond-resume-section" id="beyond-the-resume">
+      <div class="container">
+        <div class="section-header-block">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.75rem;">
+            <span class="journal-stamp beyond-header-stamp">UNLOCKED CHAPTER • BEYOND THE RESUME</span>
+            <span class="hand-note saffron">Live with the question ✦</span>
+          </div>
+          <h2 class="section-heading">Things You Wouldn't Find on My Resume</h2>
+          <p class="section-subheading">A personal collection of unfiltered curiosities, mental models, formative influences, and questions I'm still trying to understand.</p>
+        </div>
+
+        <!-- 8 Authentic Personal Categories -->
+        <div class="beyond-grid">
+          <!-- 1. Currently Curious About -->
+          <div class="beyond-card">
+            <div class="beyond-card-header">
+              <div class="beyond-card-icon" style="background: rgba(217, 83, 47, 0.12); color: var(--accent-saffron);">💡</div>
+              <h3 class="beyond-card-title">Things I'm Currently Curious About</h3>
+            </div>
+            <ul class="beyond-items-list">
+              <li class="beyond-item">How traditional Indian handloom and ethnic supply chains can integrate AI forecasting without losing human craftsmanship.</li>
+              <li class="beyond-item">The psychology of consumer trust when second-generation family businesses expand into digital-first brands.</li>
+              <li class="beyond-item">How modular organizational design helps teams pivot faster during regulatory shifts.</li>
+            </ul>
+          </div>
+
+          <!-- 2. Interesting Ideas Encountered -->
+          <div class="beyond-card">
+            <div class="beyond-card-header">
+              <div class="beyond-card-icon" style="background: rgba(14, 159, 146, 0.12); color: #0E9F92;">🧭</div>
+              <h3 class="beyond-card-title">Interesting Ideas I've Encountered</h3>
+            </div>
+            <ul class="beyond-items-list">
+              <li class="beyond-item"><strong>First-Principles Reasoning:</strong> Breaking complex business bottlenecks down to fundamental truths rather than reasoning by analogy.</li>
+              <li class="beyond-item"><strong>Second-Order Thinking:</strong> Always asking <em>“And then what?”</em> to map the long-term ripple effects of short-term fixes.</li>
+              <li class="beyond-item"><strong>Inversion:</strong> Approaching challenges backwards by identifying how a project could fail and actively designing against it.</li>
+            </ul>
+          </div>
+
+          <!-- 3. Personal Observations -->
+          <div class="beyond-card">
+            <div class="beyond-card-header">
+              <div class="beyond-card-icon" style="background: rgba(217, 155, 38, 0.12); color: var(--accent-turmeric);">🔍</div>
+              <h3 class="beyond-card-title">Personal Observations</h3>
+            </div>
+            <ul class="beyond-items-list">
+              <li class="beyond-item">The most effective collaborators in a room rarely speak the loudest; they ask the clarifying question that unlocks everyone else.</li>
+              <li class="beyond-item">Speed without thoughtful alignment is just accelerated rework.</li>
+              <li class="beyond-item">Field exposure on the factory floor teaches operational realities that textbooks simply cannot capture.</li>
+            </ul>
+          </div>
+
+          <!-- 4. Favourite Concepts -->
+          <div class="beyond-card">
+            <div class="beyond-card-header">
+              <div class="beyond-card-icon" style="background: rgba(31, 78, 91, 0.12); color: var(--accent-indigo);">📐</div>
+              <h3 class="beyond-card-title">Favourite Concepts</h3>
+            </div>
+            <ul class="beyond-items-list">
+              <li class="beyond-item"><strong>Antifragility (Nassim Taleb):</strong> Building systems and habits that actually benefit from randomness, stress, and volatility.</li>
+              <li class="beyond-item"><strong>Kaizen:</strong> The power of compound 1% daily micro-improvements across personal workflow and team operations.</li>
+              <li class="beyond-item"><strong>Ethical Stewardship:</strong> Aligning profit objectives with sustainable community well-being.</li>
+            </ul>
+          </div>
+
+          <!-- 5. Books & Influences -->
+          <div class="beyond-card">
+            <div class="beyond-card-header">
+              <div class="beyond-card-icon" style="background: rgba(126, 34, 206, 0.12); color: #7E22CE;">📚</div>
+              <h3 class="beyond-card-title">Books & Content That Influenced Me</h3>
+            </div>
+            <ul class="beyond-items-list">
+              <li class="beyond-item"><strong>Thinking, Fast and Slow</strong> (Daniel Kahneman) — Understanding heuristics, cognitive biases, and systematic human judgment.</li>
+              <li class="beyond-item"><strong>The Design of Everyday Things</strong> (Don Norman) — Learning that user error is often an affordance and feedback failure.</li>
+              <li class="beyond-item"><strong>ZEN Pencils</strong> (Gavin Aung Than) — Translating profound life philosophies and famous quotes into visual stories.</li>
+            </ul>
+          </div>
+
+          <!-- 6. Still Trying to Understand -->
+          <div class="beyond-card">
+            <div class="beyond-card-header">
+              <div class="beyond-card-icon" style="background: rgba(155, 34, 38, 0.12); color: var(--accent-crimson);">❓</div>
+              <h3 class="beyond-card-title">Things I'm Still Trying to Understand</h3>
+            </div>
+            <ul class="beyond-items-list">
+              <li class="beyond-item">How organizations can sustainably maintain high empathy while enforcing strict operational performance metrics.</li>
+              <li class="beyond-item">The exact tipping point where data analytics should yield to grounded, experienced human intuition.</li>
+            </ul>
+          </div>
+
+          <!-- 7. Creative Interests -->
+          <div class="beyond-card">
+            <div class="beyond-card-header">
+              <div class="beyond-card-icon" style="background: rgba(42, 92, 74, 0.12); color: var(--accent-forest);">🎨</div>
+              <h3 class="beyond-card-title">Creative Interests</h3>
+            </div>
+            <ul class="beyond-items-list">
+              <li class="beyond-item">Information architecture and editorial visual layouts that turn dry data into compelling human narratives.</li>
+              <li class="beyond-item">Traditional Indian textile motifs, weaving techniques, and regional artisan histories.</li>
+              <li class="beyond-item">Organizing sports events and building high-energy team dynamics.</li>
+            </ul>
+          </div>
+
+          <!-- 8. Personal Reflections -->
+          <div class="beyond-card">
+            <div class="beyond-card-header">
+              <div class="beyond-card-icon" style="background: rgba(217, 83, 47, 0.12); color: var(--accent-saffron);">✍️</div>
+              <h3 class="beyond-card-title">Personal Reflections</h3>
+            </div>
+            <ul class="beyond-items-list">
+              <li class="beyond-item">Curiosity isn't a final milestone or a scorecard; it's a daily posture.</li>
+              <li class="beyond-item">To <em>“Live with the question”</em> means feeling comfortable with the unknown while actively building the skills to explore it.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PART 2: XO / TIC-TAC-TOE EASTER EGG -->
+        <div class="xo-experience-container" id="xo-easter-egg">
+          <div class="xo-intro-wrap" id="xo-intro-wrap">
+            <span class="journal-stamp saffron" style="margin-bottom: 0.75rem;">FINAL EASTER EGG</span>
+            <h3 class="xo-tagline">“Since you came this far… Want to play?”</h3>
+            <p class="xo-subtext">“A quick game of XO. No pressure. Just curiosity.”</p>
+            <button class="btn btn-primary" id="xo-play-trigger-btn" data-cursor="arrow">
+              <span>PLAY XO</span>
+              <span class="btn-icon">→</span>
+            </button>
+          </div>
+
+          <!-- Active XO Gameplay Area -->
+          <div class="xo-gameplay-area" id="xo-gameplay-area">
+            <div class="xo-status-bar">
+              <span class="xo-turn-indicator" id="xo-turn-indicator">YOUR TURN (X)</span>
+              <span class="xo-live-commentary" id="xo-live-commentary">“A quick game of XO. No pressure. Just curiosity.”</span>
+            </div>
+
+            <!-- 3x3 Board -->
+            <div class="xo-board-grid">
+              <div class="xo-cell" data-index="0" data-cursor="arrow"></div>
+              <div class="xo-cell" data-index="1" data-cursor="arrow"></div>
+              <div class="xo-cell" data-index="2" data-cursor="arrow"></div>
+              <div class="xo-cell" data-index="3" data-cursor="arrow"></div>
+              <div class="xo-cell" data-index="4" data-cursor="arrow"></div>
+              <div class="xo-cell" data-index="5" data-cursor="arrow"></div>
+              <div class="xo-cell" data-index="6" data-cursor="arrow"></div>
+              <div class="xo-cell" data-index="7" data-cursor="arrow"></div>
+              <div class="xo-cell" data-index="8" data-cursor="arrow"></div>
+            </div>
+
+            <!-- Game Result Outcome Card -->
+            <div class="xo-result-overlay" id="xo-result-overlay">
+              <span class="journal-stamp indigo" style="margin-bottom: 0.5rem; display: inline-block;">GAME OVER.</span>
+              <h4 class="xo-result-title" id="xo-result-title">YOU WIN.</h4>
+              <p class="xo-result-desc" id="xo-result-desc">“Curiosity looks good on you.”</p>
+              <p style="font-family: var(--font-serif); font-size: 0.95rem; font-style: italic; color: var(--ink-muted); margin-bottom: 1.25rem;">
+                “Now you've seen the portfolio. But you haven't seen everything.”
+              </p>
+              <div class="xo-result-actions">
+                <button class="btn btn-primary btn-sm" id="xo-keep-exploring-btn" data-cursor="arrow">
+                  <span>KEEP EXPLORING</span>
+                  <span class="btn-icon">→</span>
+                </button>
+                <button class="btn btn-secondary btn-sm" id="xo-restart-btn">
+                  <span>Play Again ↺</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
          SECTION 13: CONTACT ("LET'S CONNECT")
          ========================================================================= -->
     <section class="portfolio-section" id="contact">
@@ -1915,7 +2156,15 @@
             <span class="journal-stamp" style="border-color: var(--accent-turmeric); color: var(--accent-turmeric); background: rgba(217, 155, 38, 0.12);">
               09 / LET'S CONNECT
             </span>
-            <span class="hand-note" style="color: var(--accent-turmeric); font-size: 1.35rem;">Live with the question ✦</span>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="hand-note" style="color: var(--accent-turmeric); font-size: 1.35rem;">Live with the question ✦</span>
+              <span class="hidden-question-mark qmark-typographic" data-question-id="q_contact" title="Explore this question" data-cursor="question">
+                <span class="q-glyph-wrap">
+                  <span class="q-glyph">?</span>
+                  <span class="q-arrow">→</span>
+                </span>
+              </span>
+            </div>
           </div>
 
           <h2 style="font-family: var(--font-serif); font-size: clamp(2.2rem, 5vw, 3.8rem); color: #FAF7F2; margin-bottom: 1.25rem;">
@@ -1966,8 +2215,12 @@
         <h2 class="final-closing-title">“And the next question is…?”</h2>
         <div class="final-signature-name dynamic-user-name">Udayaritthi</div>
 
-        <div class="final-morphing-glyph" data-cursor="question" title="Click to explore the next question">
-          ?
+        <div class="final-morphing-wrapper" id="final-morph-wrapper" data-cursor="question" title="Click to ask your next question">
+          <div class="final-morph-glyph-box">
+            <span>?</span>
+            <span class="final-morph-arrow">→</span>
+          </div>
+          <div class="final-morph-caption">“What's your next question?”</div>
         </div>
 
         <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-muted); margin-top: 1.5rem; letter-spacing: 0.1em; text-transform: uppercase;">
@@ -2111,6 +2364,81 @@
     </div>
   </div>
 
+  <!-- =========================================================================
+       FLOATING DISCOVERY TRACKER DOCK & MODALS
+       ========================================================================= -->
+
+  <!-- Floating Discovery Tracker Dock (Bottom-Left) -->
+  <div class="quest-floating-dock" id="quest-floating-dock" title="Click to view discovered questions">
+    <div class="dock-glyph">?</div>
+    <div class="dock-text-wrap">
+      <span class="dock-label">QUESTIONS FOUND</span>
+      <span class="dock-score" id="dock-score-val"><span class="score-num">0</span> / 7</span>
+    </div>
+    <div class="dock-progress-dots">
+      <div class="dock-dot"></div>
+      <div class="dock-dot"></div>
+      <div class="dock-dot"></div>
+      <div class="dock-dot"></div>
+      <div class="dock-dot"></div>
+      <div class="dock-dot"></div>
+      <div class="dock-dot"></div>
+    </div>
+    <button class="dock-unlock-btn" id="dock-unlock-cta">UNLOCKED ★</button>
+  </div>
+
+  <!-- Question Quest Guide / Hint Drawer -->
+  <div class="quest-guide-modal" id="quest-guide-modal">
+    <div class="quest-guide-header">
+      <span class="journal-stamp saffron" style="font-size: 0.65rem;">DISCOVERY JOURNAL</span>
+      <button class="modal-close-btn" id="quest-guide-close-btn" style="position: static; font-size: 1rem; width: 28px; height: 28px;">✕</button>
+    </div>
+    <p style="font-family: var(--font-serif); font-size: 0.95rem; font-style: italic; color: var(--ink-secondary); margin: 0 0 0.75rem 0;">
+      “Seven questions are hidden across the chapters.”
+    </p>
+    <ul class="quest-list-items">
+      <li class="quest-item" data-target-q="q_about"><span>01 / About Me</span><span class="item-status">HIDDEN</span></li>
+      <li class="quest-item" data-target-q="q_journey"><span>02 / My Journey</span><span class="item-status">HIDDEN</span></li>
+      <li class="quest-item" data-target-q="q_experience"><span>03 / Experience</span><span class="item-status">HIDDEN</span></li>
+      <li class="quest-item" data-target-q="q_projects"><span>04 / Projects</span><span class="item-status">HIDDEN</span></li>
+      <li class="quest-item" data-target-q="q_protosem"><span>05 / Protosem</span><span class="item-status">HIDDEN</span></li>
+      <li class="quest-item" data-target-q="q_skills"><span>06 / Skills & Research</span><span class="item-status">HIDDEN</span></li>
+      <li class="quest-item" data-target-q="q_contact"><span>07 / Let's Connect</span><span class="item-status">HIDDEN</span></li>
+    </ul>
+    <div style="margin-top: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+      <button class="btn btn-secondary btn-sm" onclick="window.resetQuestionQuest()" style="font-size: 0.75rem; padding: 4px 8px;">Reset Quest ↺</button>
+      <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-muted);">Click '?' marks to discover</span>
+    </div>
+  </div>
+
+  <!-- 7/7 Question Discovery Unlocked Overlay -->
+  <div class="quest-unlocked-overlay" id="quest-unlocked-overlay">
+    <div class="quest-unlocked-card">
+      <span class="quest-unlocked-badge">DISCOVERY COMPLETE</span>
+      <h2 class="quest-unlocked-title">YOU FOUND THEM ALL.</h2>
+      <div class="quest-unlocked-line-1">“But that's the thing about questions…”</div>
+      <div class="quest-unlocked-line-2">“…there's always another one.”</div>
+      
+      <div class="quest-unlocked-dest">
+        <span class="quest-unlocked-dest-label">UNLOCKED SECRET CHAPTER</span>
+        <h3 class="quest-unlocked-dest-title">BEYOND THE RESUME</h3>
+        <p style="font-size: 0.92rem; color: var(--ink-muted); margin: 0.35rem 0 0 0;">
+          Things you wouldn't find on a standard CV — curiosities, observations, influences, and a friendly game of XO.
+        </p>
+      </div>
+
+      <div class="quest-unlocked-actions">
+        <button class="btn btn-primary" id="unlock-discover-btn" data-cursor="arrow">
+          <span>DISCOVER</span>
+          <span class="btn-icon">→</span>
+        </button>
+        <button class="btn btn-secondary" id="unlock-skip-btn">
+          <span>Continue Browsing</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="js/custom-cursor.js"></script>
   <script src="js/question-path.js"></script>
@@ -2120,6 +2448,7 @@
   <script src="js/journal-manager.js"></script>
   <script src="js/interactions.js"></script>
   <script src="js/elevated-interactions.js"></script>
+  <script src="js/interactive-experience.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
